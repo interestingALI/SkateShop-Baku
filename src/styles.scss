@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+$orangelight: #ffe59e !important;
+$orangebase: #ffd050 !important;
+$orangedark: #edb928 !important;
+$orangeverydark: #be8f0e !important;
+
+$peach: #ffb050 !important;
+
+$blue: #4850b1 !important;
+$bluelight: #6970c7 !important;
+$bluedark: #1b2383 !important;
+
+@import "bulma/bulma.sass";
+
+$primary: $orangebase !important;
+$link: $bluelight !important;
+$info: $blue !important;
+$warning: $orangedark !important;
+$dark: $orangeverydark !important;
+
+$success: $green;
+$danger: $red;
+$text: $grey-darker;
