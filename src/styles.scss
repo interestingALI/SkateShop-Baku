@@ -17,3 +17,10 @@ $link: $bluelight !important;
 $info: $blue !important;
 $warning: $orangedark !important;
 $dark: $orangeverydark !important;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
