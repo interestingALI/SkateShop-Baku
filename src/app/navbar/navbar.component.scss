@@ -5,6 +5,25 @@ img:hover {
 a:hover {
   opacity: 0.8;
 }
-.is-primary {
+.bg-primary {
   background-color: $orangebase;
+}
+
+.brand-text {
+  margin-left: 1rem;
+  padding: 0.2rem;
+  font: 1.6rem Oswald;
+  border: 2px solid rgb(30, 49, 49);
+  color: rgb(30, 49, 49) !important;
+}
+.nav-link {
+  font-size: 1.1rem;
+  color: rgb(30, 49, 49) !important;
+  font-weight: 500;
+}
+.disabled {
+  color: rgb(92, 126, 126) !important;
+}
+nav {
+  border: 1px solid $orangedark;
 }

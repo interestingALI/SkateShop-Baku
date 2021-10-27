@@ -9,14 +9,11 @@ $blue: #4850b1 !important;
 $bluelight: #6970c7 !important;
 $bluedark: #1b2383 !important;
 
-@import "bulma/bulma.sass";
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import "~bootstrap/dist/css/bootstrap.min.css";
 
 $primary: $orangebase !important;
 $link: $bluelight !important;
 $info: $blue !important;
 $warning: $orangedark !important;
 $dark: $orangeverydark !important;
-
-$success: $green;
-$danger: $red;
-$text: $grey-darker;
