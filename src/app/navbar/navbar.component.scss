@@ -1,10 +1,8 @@
 @import "../../styles.scss";
-img:hover {
+.logo:hover {
   opacity: 0.8;
 }
-a:hover {
-  opacity: 0.8;
-}
+
 .bg-primary {
   background-color: $orangebase;
 }
@@ -21,9 +19,7 @@ a:hover {
   color: rgb(30, 49, 49) !important;
   font-weight: 500;
 }
-.disabled {
-  color: rgb(92, 126, 126) !important;
-}
+
 nav {
   border: 1px solid $orangedark;
 }
@@ -41,19 +37,21 @@ nav {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
+  background-color: $orangebase;
 }
 
 .header li a {
   display: block;
   padding: 20px 20px;
-  border-right: 1px solid #f4f4f4;
   text-decoration: none;
+  color: rgb(30, 49, 49) !important;
+  font-weight: 500;
+  border-radius: 20%;
 }
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: #f4f4f4;
+  background-color: $orangelight;
 }
 
 /* menu */
@@ -62,17 +60,19 @@ nav {
   clear: both;
   max-height: 0;
   transition: max-height 0.2s ease-out;
+  margin: 13px;
 }
 
 /* menu icon */
 
 .header .menu-icon {
   cursor: pointer;
-  display: inline-block;
   float: right;
-  padding: 28px 20px;
+  display: inline-block;
+  padding: 42px 15px;
   position: relative;
   user-select: none;
+  margin-right: 26px;
 }
 
 .header .menu-icon .navicon {
@@ -82,7 +82,7 @@ nav {
   position: relative;
   transition: background 0.2s ease-out;
   width: 18px;
-  transform: scale(1.7);
+  transform: scale(1.9);
   text-align: right;
 }
 
@@ -137,6 +137,10 @@ nav {
   font-size: 2em;
   padding: 10px 20px;
   text-decoration: none;
+  margin: 10px;
+}
+a.dsbld {
+  text-decoration: line-through !important;
 }
 
 @media (min-width: 992px) {
