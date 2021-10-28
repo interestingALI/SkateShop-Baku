@@ -14,14 +14,9 @@
   border: 2px solid rgb(30, 49, 49);
   color: rgb(30, 49, 49) !important;
 }
-.nav-link {
-  font-size: 1.1rem;
-  color: rgb(30, 49, 49) !important;
-  font-weight: 500;
-}
 
-nav {
-  border: 1px solid $orangedark;
+header {
+  border: 2px solid $orangedark;
 }
 
 .header {
@@ -51,7 +46,10 @@ nav {
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: $orangelight;
+  background-color: rgba(255, 166, 0, 0.199);
+}
+.active-link {
+  background-color: rgba(255, 166, 0, 0.199);
 }
 
 /* menu */

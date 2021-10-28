@@ -3,9 +3,9 @@
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/aboutus">About us</a></li>
-      <li><a routerLink="/contactus">Contact Us</a></li>
-      <li><a routerLink="/shop" class="dsbld">Shop -></a></li>
+      <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+      <li><a routerLink="/aboutus" routerLinkActive="active-link">About us</a></li>
+      <li><a routerLink="/contactus" routerLinkActive="active-link">Contact Us</a></li>
+      <li><a routerLink="/shop" class="dsbld" routerLinkActive="active-link">Shop -></a></li>
     </ul>
 </header>

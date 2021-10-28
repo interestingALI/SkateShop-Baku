@@ -1,0 +1,18 @@
+@import "../../styles.scss";
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  border-top: 2px solid $orangebase;
+}
+.bg-primary {
+  background-color: $orangedark;
+}
+.text-dark {
+  color: $orangelight;
+}
+.btn-outline-dark {
+  color: $orangeverydark;
+  border: 2px solid $orangeverydark;
+  border-radius: 40%;
+}
