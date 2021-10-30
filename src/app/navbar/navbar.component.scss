@@ -15,16 +15,13 @@
   color: rgb(30, 49, 49) !important;
 }
 
-header {
-  border: 2px solid $orangedark;
-}
-
 .header {
-  background-color: #fff;
+  background-color: $orangebase;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
   width: 100%;
   z-index: 3;
+  border-bottom: 2px solid $orangedark;
+  position: sticky;
 }
 
 .header ul {
@@ -155,5 +152,9 @@ a.dsbld {
   }
   .header .menu-icon {
     display: none;
+  }
+  .header {
+    top: 0;
+    height: 100px;
   }
 }
