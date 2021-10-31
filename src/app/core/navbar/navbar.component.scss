@@ -1,4 +1,4 @@
-@import "../../styles.scss";
+@import "../../../styles.scss";
 .logo:hover {
   transition: 0.3s;
   opacity: 0.7;
@@ -18,11 +18,11 @@
 
 .header {
   background-color: $orangebase;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
   z-index: 3;
   border-bottom: 2px solid $orangedark;
   position: sticky;
+  transition: 0.3s;
 }
 
 .header ul {
@@ -109,7 +109,7 @@
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: 260px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -155,5 +155,27 @@
   .header {
     top: 0;
     height: 100px;
+  }
+}
+
+@media (max-width: 352px) {
+  .header .menu-icon {
+    margin-right: 1px;
+  }
+  .navbar-brand,
+  .brand-text,
+  .logo {
+    margin: 5px !important;
+  }
+}
+
+@media (max-width: 280px) {
+  .header .menu-icon {
+    margin-right: 12px;
+  }
+  .navbar-brand,
+  .brand-text,
+  .logo {
+    margin: 10px 10px 0 10px !important;
   }
 }
