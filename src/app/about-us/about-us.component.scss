@@ -5,7 +5,7 @@
       rgba(255, 137, 3, 0.151),
       rgba(0, 0, 0, 0.5)
     ),
-    url("https://images8.alphacoders.com/643/643804.jpg");
+    url("../../assets/img/about-background-min.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,5 +40,12 @@
   .col-md-2 {
     width: 30% !important;
     margin: 40px 20px 30px 30px;
+  }
+  .background {
+    background-image: linear-gradient(
+        rgba(255, 137, 3, 0.151),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("../../assets/img/about-background.jpg");
   }
 }
