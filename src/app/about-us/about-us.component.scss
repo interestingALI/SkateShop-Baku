@@ -28,7 +28,13 @@
 .col-md-5 {
   margin-bottom: 40px;
   border-radius: 2%;
-  background: $orangelight;
+  background: rgb(255, 229, 158);
+  background: radial-gradient(
+    circle,
+    rgba(255, 229, 158, 1) 0%,
+    rgba(255, 208, 80, 1) 75%,
+    rgba(190, 143, 14, 1) 100%
+  );
   border: 2px solid $orangebase;
   box-shadow: 1px 1px 5px black;
 }

@@ -41,6 +41,7 @@
   font-weight: 500;
   border-radius: 20%;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .header li a:hover,
@@ -118,6 +119,9 @@
 .header .menu-btn:checked ~ .menu {
   max-height: 260px;
 }
+.header .menu-btn:checked ~ .menu {
+  overflow: visible;
+}
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
@@ -143,10 +147,13 @@
   text-decoration: none;
   margin: 10px;
 }
-.shopNacc > li {
-  display: inline-block;
+////////////////////
+
+.shopNacc {
   font-size: large;
-  float: right;
+}
+.dropdown-menu {
+  background-color: $orangebase;
 }
 
 @media (min-width: 992px) {
@@ -160,6 +167,7 @@
     clear: none;
     float: left;
     max-height: none;
+    overflow: visible;
   }
   .header .menu-icon {
     display: none;
