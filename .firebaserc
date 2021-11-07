@@ -1,5 +1,5 @@
 {
   "projects": {
-    "default": "skateshop-baku-73b54"
+    "default": "dist/SkateShop-Baku"
   }
 }
