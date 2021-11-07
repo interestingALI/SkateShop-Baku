@@ -60,6 +60,13 @@
   margin: 13px;
 }
 
+.menu > li {
+  transition: 0.2s;
+}
+.menu > li:hover {
+  padding-top: 3px;
+}
+
 /* menu icon */
 
 .header .menu-icon {
@@ -135,6 +142,11 @@
   padding: 10px 20px;
   text-decoration: none;
   margin: 10px;
+}
+.shopNacc > li {
+  display: inline-block;
+  font-size: large;
+  float: right;
 }
 
 @media (min-width: 992px) {

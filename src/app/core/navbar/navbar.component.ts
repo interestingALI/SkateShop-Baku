@@ -10,8 +10,6 @@ export class NavbarComponent implements OnInit {
 
   constructor() { 
     
-
-
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
