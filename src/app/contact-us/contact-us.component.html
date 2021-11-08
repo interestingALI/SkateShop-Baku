@@ -42,20 +42,24 @@
     </section>
     <section>
         <div class="container contact-form">
-            <form method="">
+            <form [formGroup]=contactForm method="">
                 <h2>Drop Us a Message</h2>
                 <div class="row">
                     <div class="form-group">
-                        <input type="text" name="txtName" class="form-control" placeholder="Your Name" value="" />
+                        <input formControlName="name" type="text" name="txtName" class="form-control" placeholder="Your Name *" />
+                        <span *ngIf="name.invalid && name.touched" class="error">Name is required!</span>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="txtEmail" class="form-control" placeholder="Your Email" value="" />
+                        <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" formControlName="email" type="email" name="txtEmail" class="form-control" placeholder="Your Email *" />
+                        <span *ngIf="email.invalid && email.touched" class="error">The email is invalid!</span>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number" value="" />
+                        <input pattern='^(0?(7[07]|5[015]|60|12))\d{7}$' formControlName="phone" type="number" name="txtPhone" class="form-control" placeholder="Your Phone Number." />
+                        <span *ngIf="phone.invalid" class="error">The phone number is invalid!</span>
                     </div>
                     <div class="form-group">
-                        <textarea name="txtMsg" class="form-control" placeholder="Hello! I really like your store!" style="width: 100%; height: 150px;"></textarea>
+                        <textarea formControlName="message" name="txtMsg" class="form-control" placeholder="Hey! I really like your store! *" style="width: 100%; height: 150px;"></textarea>
+                        <span *ngIf="message.invalid && message.touched" class="error">You can't send empty messages!</span>
                     </div>
                     <div class="form-group">
                         <input type="submit" name="btnSubmit" class="btnContact" value="Send the Message" />

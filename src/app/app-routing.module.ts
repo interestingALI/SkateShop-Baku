@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { AboutUsComponent } from "./about-us/about-us.component";
 import { HomeComponent } from "./home/home.component";
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,11 @@ const routes: Routes = [
   {
     path: 'aboutus',
     component: AboutUsComponent
-  }
+  },
+
+  // 404 error
+  { path: '**', pathMatch: 'full', component: PagenotfoundComponent },
+
 ];
 
 @NgModule({

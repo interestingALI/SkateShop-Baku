@@ -77,6 +77,30 @@ textarea:focus {
   border: 2px solid $orangebase !important;
   box-shadow: 0 0 10px #4b4b4b !important;
 }
+textarea.ng-invalid,
+input.ng-invalid {
+  border-right: 7px solid red;
+}
+
+textarea.ng-valid,
+input.ng-valid {
+  border-right: 7px solid green;
+}
+span.error {
+  margin-left: 15px;
+  color: #00ffea;
+}
+// Remove number input arrows
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
 .dbox {
   width: 100%;

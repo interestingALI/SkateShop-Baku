@@ -8,19 +8,23 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 import { CoreModule } from "./core/core.module";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { ReactiveFormsModule } from '@angular/forms';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactUsComponent,
     AboutUsComponent,
-    HomeComponent
+    HomeComponent,
+    PagenotfoundComponent
   ],
   imports: [
     NgbModule,
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
