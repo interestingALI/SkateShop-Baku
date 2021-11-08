@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   color: $orangedark;
-  text-shadow: 1px 1px 60px $orangeverydark;
+  text-shadow: #474747 3px 2px 2px;
   border-top: 2px solid $orangedark;
   border-bottom: 2px solid $orangedark;
   transition: all 0.5s;
@@ -27,6 +27,7 @@
 }
 .col-md-5 {
   margin-bottom: 40px;
+  padding: 10px;
   border-radius: 2%;
   background: rgb(255, 229, 158);
   background: radial-gradient(

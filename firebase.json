@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/SkateShop-Baku",
     "ignore": [
       "firebase.json",
       "**/.*",

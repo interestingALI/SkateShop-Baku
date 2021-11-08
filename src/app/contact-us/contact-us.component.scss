@@ -1,0 +1,106 @@
+@import "../../styles.scss";
+
+.iframe-container {
+  margin-top: 2%;
+  text-align: center;
+  width: 100%;
+}
+.map {
+  border: 2px solid $orangedark;
+  width: 90%;
+  box-shadow: 0px 0px 25px 0px #474747;
+}
+.where {
+  text-align: center;
+  margin-top: 2%;
+  padding: 10px;
+  border: 2px solid $orangedark;
+  background: $orangebase;
+  box-shadow: 0px 0px 25px 1px #474747;
+  transition: 0.7s;
+  &:hover {
+    background: $orangedark;
+  }
+}
+
+.contact-form {
+  background: $orangebase;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  border: 2px solid $orangedark;
+  box-shadow: 0px 0px 25px 2px #474747;
+}
+.contact-form .form-control {
+  border-radius: 1rem;
+}
+.contact-form form {
+  padding: 14%;
+}
+.contact-form form .row {
+  margin-bottom: -7%;
+}
+.contact-form h2 {
+  margin-bottom: 4%;
+  margin-top: -10%;
+  text-align: center;
+  color: #363636;
+}
+.contact-form .btnContact {
+  width: 100%;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5%;
+  background: $orangeverydark;
+  font-weight: 600;
+  color: #fff;
+}
+.form-group {
+  margin: 10px 0 10px 0;
+}
+input:focus,
+textarea:focus {
+  outline: none !important;
+  border: 2px solid $orangebase !important;
+  box-shadow: 0 0 10px #4b4b4b !important;
+}
+
+.dbox {
+  width: 100%;
+  margin-bottom: 25px;
+  padding: 0 20px;
+
+  p {
+    margin-bottom: 0;
+    span {
+      font-weight: 500;
+    }
+    a {
+      color: #363636;
+    }
+  }
+  .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: $orangedark;
+    color: $orangelight;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    span {
+      font-size: 20px;
+    }
+  }
+}
+.infoicons {
+  margin-top: 30px !important;
+}
+
+@media (min-width: 992px) {
+  .col-md-4 {
+    width: 33% !important;
+  }
+  .infoicons {
+    margin: auto;
+    width: 80%;
+  }
+}
