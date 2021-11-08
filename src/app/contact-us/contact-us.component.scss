@@ -24,7 +24,14 @@
 }
 
 .contact-form {
-  background: $orangebase;
+  background-image: linear-gradient(
+      rgba(255, 137, 3, 0.151),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../../assets/img/contact-back.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-top: 2%;
   margin-bottom: 2%;
   border: 2px solid $orangedark;
@@ -43,7 +50,7 @@
   margin-bottom: 4%;
   margin-top: -10%;
   text-align: center;
-  color: #363636;
+  color: #d3d3d3;
 }
 .contact-form .btnContact {
   width: 100%;
@@ -53,6 +60,13 @@
   background: $orangeverydark;
   font-weight: 600;
   color: #fff;
+  transition: 0.2s;
+  &:hover {
+    background-color: $orangedark;
+  }
+  &:active {
+    background-color: $orangeverydark;
+  }
 }
 .form-group {
   margin: 10px 0 10px 0;
