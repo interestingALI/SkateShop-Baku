@@ -90,7 +90,7 @@ span.error {
   margin-left: 15px;
   color: #00ffea;
 }
-// Remove number input arrows
+// Remove number input arrows //////
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -101,6 +101,7 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+////////////////////////////////////
 
 .dbox {
   width: 100%;
@@ -140,5 +141,11 @@ input[type="number"] {
   .infoicons {
     margin: auto;
     width: 80%;
+  }
+}
+
+@media (max-width: 366px) {
+  span.error {
+    margin-left: 2px;
   }
 }

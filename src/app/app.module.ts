@@ -10,6 +10,7 @@ import { CoreModule } from "./core/core.module";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { ReactiveFormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { SliderComponent } from './slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +18,15 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     ContactUsComponent,
     AboutUsComponent,
     HomeComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    SliderComponent
   ],
   imports: [
     NgbModule,
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
