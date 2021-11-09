@@ -65,12 +65,14 @@ export class NavbarComponent implements OnInit {
     if (this.firebaseService.isLoggedIn) 
       this.isSignedIn = true
       this.modalService.dismissAll()
+      this.account = JSON.parse(localStorage.getItem('user'))
   }
   async onSignin(email:string, password:string){
     await this.firebaseService.signin(email,password)
     if (this.firebaseService.isLoggedIn) 
       this.isSignedIn = true
       this.modalService.dismissAll()
+      this.account = JSON.parse(localStorage.getItem('user'))
   }
 
 
