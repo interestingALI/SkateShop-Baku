@@ -127,6 +127,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "SkateShop-Baku:build:production",
+            "firebaseProject": "skateshopbaku",
+            "firebaseHostingSite": "skateshopbaku"
+          }
         }
       }
     }

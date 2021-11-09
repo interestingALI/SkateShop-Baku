@@ -11,6 +11,8 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PopularProductsComponent } from './popular-products/popular-products.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { FirebaseService } from './services/firebase.service';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,17 @@ import { PopularProductsComponent } from './popular-products/popular-products.co
     AppRoutingModule,
     CoreModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp({
+    apiKey: "AIzaSyAZSTvtlt-dPNHj9jlHwufFsVkYQRFiEdE",
+    authDomain: "skateshopbaku.firebaseapp.com",
+    projectId: "skateshopbaku",
+    storageBucket: "skateshopbaku.appspot.com",
+    messagingSenderId: "1043263125755",
+    appId: "1:1043263125755:web:0584acbd8572b9fc1e585e"
+    })
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

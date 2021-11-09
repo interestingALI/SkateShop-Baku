@@ -14,9 +14,10 @@
       <li ngbDropdown class="nav-item dropdown show">
         <a class="nav-link" ngbDropdownToggle><i class="fas fa-user-circle"></i></a>
         <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a ngbDropdownItem class="dropdown-item" (click)="open(login)">Log in</a>
+          <a *ngIf='!isSignedIn'  ngbDropdownItem class="dropdown-item" (click)="open(login)">Log in</a>
+          <a disabled *ngIf='isSignedIn' ngbDropdownItem class="dropdown-item">{{'Signed in as ' + account}}</a>
           <div class="dropdown-divider"></div>
-          <a ngbDropdownItem class="dropdown-item" style="color: red!important;" href="">Log out</a>
+          <a ngbDropdownItem class="dropdown-item" style="color: red!important;" (click)='logout()'>Log out</a>
         </div>
       </li>
 
@@ -36,13 +37,13 @@
   <div class="modal-body loginmodal">
     <form [formGroup]=loginForm method="">
       
-      <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" formControlName="email" type="email" class="form-control mb-4" placeholder="E-mail">
+      <input type="email" #emailSignin pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" formControlName="email" class="form-control mb-4" placeholder="E-mail">
 
-      <input formControlName="password" type="password" class="form-control mb-4" placeholder="Password">
+      <input type="password" #passwordSignin formControlName="password" class="form-control mb-4" placeholder="Password">
 
       <div class="modal-footer loginmodal">
         <button type="button" class="btn btn-outline-dark" (click)="open(signup)">Sign Up?</button>
-        <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Log In</button>
+        <button [disabled]="loginForm.invalid" type="button" class="btn btn-outline-dark" (click)="onSignin(emailSignin.value, passwordSignin.value)">Log In</button>
       </div>
     </form>
   </div>
@@ -59,16 +60,14 @@
     </button>
   </div>
   <div class="modal-body loginmodal">
-    <form [formGroup]=loginForm>
-      <input formControlName="name" type="text" name="txtName" class="form-control mb-2" placeholder="Your username *" />
+    <form [formGroup]=signupForm>
 
-      <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" formControlName="email" type="email" class="form-control mb-4" placeholder="E-mail *">
+      <input type="email" #emailSignup  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" formControlName="emailsU" class="form-control mb-4" placeholder="E-mail *">
 
-      <input formControlName="password" type="password" class="form-control mb-4" placeholder="Password *">
-      <input formControlName="password" type="password" class="form-control" placeholder="Retype Password *">
+      <input type="password" #passwordSignup formControlName="passwordsU" class="form-control mb-4" placeholder="Password *">
 
       <div class="modal-footer loginmodal">
-        <button type="button" class="btn btn-outline-dark" >Sign Up</button>
+        <button [disabled]="signupForm.invalid" (click)="modal.close()" (click)="onSignup(emailSignup.value, passwordSignup.value)" type="button" class="btn btn-outline-dark" >Sign Up</button>
       </div>
     </form>
   </div>

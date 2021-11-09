@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "dist/SkateShop-Baku"
+    "default": "skateshopbaku"
+  },
+  "targets": {
+    "skateshopbaku": {
+      "hosting": {
+        "SkateShop-Baku": [
+          "skateshopbaku"
+        ]
+      }
+    }
   }
 }
