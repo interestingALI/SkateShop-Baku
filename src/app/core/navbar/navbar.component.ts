@@ -13,7 +13,9 @@ import { FirebaseService } from 'src/app/services/firebase.service';
 export class NavbarComponent implements OnInit {
 
   isSignedIn = false;
-  account = JSON.parse(localStorage.getItem('user')).email
+  
+  account = JSON.parse(localStorage.getItem('user')) === null? '' : JSON.parse(localStorage.getItem('user')).email
+  
   
   
 
@@ -52,7 +54,6 @@ export class NavbarComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log(localStorage.getItem('user'))
     if (localStorage.getItem('user')!==null) 
       this.isSignedIn = true
     else
