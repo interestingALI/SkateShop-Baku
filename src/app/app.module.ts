@@ -10,6 +10,7 @@ import { CoreModule } from "./core/core.module";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { ReactiveFormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PopularProductsComponent } from './popular-products/popular-products.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     AboutUsComponent,
     HomeComponent,
     PagenotfoundComponent,
+    PopularProductsComponent,
   ],
   imports: [
     NgbModule,
