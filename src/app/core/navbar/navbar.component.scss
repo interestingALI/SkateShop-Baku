@@ -155,7 +155,43 @@
 .dropdown-menu {
   background-color: $orangebase;
 }
+////////////////// login modal ////////////////
+.close {
+  width: 30px;
+  height: 30px;
+  border: 2px solid orange;
+  border-radius: 50%;
+  transition: 0.4s;
+  &:hover {
+    border: 2px solid red;
+  }
+  &:focus {
+    border: 2px solid orange !important;
+  }
+}
 
+.btn-outline-dark {
+  background-color: $orangedark;
+  &:hover {
+    background-color: green !important;
+  }
+}
+.loginmodal {
+  background-color: $orangelight;
+}
+.modal-header {
+  border-bottom: 1px solid $orangedark;
+}
+.modal-footer {
+  border-top: 1px solid $orangedark;
+}
+input.ng-invalid {
+  border-right: 7px solid red;
+}
+input.ng-valid {
+  border-right: 7px solid green;
+}
+////////////////////////////////////////////////
 @media (min-width: 992px) {
   .header li {
     float: left;

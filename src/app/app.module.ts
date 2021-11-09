@@ -8,7 +8,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 import { CoreModule } from "./core/core.module";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PopularProductsComponent } from './popular-products/popular-products.component';
 
@@ -27,6 +27,7 @@ import { PopularProductsComponent } from './popular-products/popular-products.co
     AppRoutingModule,
     CoreModule,
     ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

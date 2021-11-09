@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
 
 
 @Component({
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
+
+
 export class NavbarComponent implements OnInit {
 
-  constructor() { 
-    
+  loginForm = new FormGroup({
+    password: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+    name: new FormControl('', Validators.required)
+  })
+
+  get password(){ return this.loginForm.get('password')}
+  get email(){ return this.loginForm.get('email')}
+  get name(){ return this.loginForm.get('name')}
+
+
+  constructor(private modalService: NgbModal) {   
+    // burger menu
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function() {
     let currentScrollPos = window.pageYOffset;
@@ -25,6 +40,13 @@ export class NavbarComponent implements OnInit {
     }
   }
 
+
   ngOnInit(): void {}
+
+
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'});
+  }
+
 
 }

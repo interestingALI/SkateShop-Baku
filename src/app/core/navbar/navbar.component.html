@@ -14,7 +14,7 @@
       <li ngbDropdown class="nav-item dropdown show">
         <a class="nav-link" ngbDropdownToggle><i class="fas fa-user-circle"></i></a>
         <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a ngbDropdownItem class="dropdown-item" href="">Log in</a>
+          <a ngbDropdownItem class="dropdown-item" (click)="open(login)">Log in</a>
           <div class="dropdown-divider"></div>
           <a ngbDropdownItem class="dropdown-item" style="color: red!important;" href="">Log out</a>
         </div>
@@ -24,5 +24,53 @@
         <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i></a>
       </li>
     </ul>  
-
 </header>
+<!--                       LOGIN                                                                 -->
+<ng-template #login let-modal>
+  <div class="modal-header loginmodal">
+    <h4 class="modal-title" id="modal-basic-title">Log In</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body loginmodal">
+    <form [formGroup]=loginForm method="">
+      
+      <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" formControlName="email" type="email" class="form-control mb-4" placeholder="E-mail">
+
+      <input formControlName="password" type="password" class="form-control mb-4" placeholder="Password">
+
+
+    </form>
+  </div>
+  <div class="modal-footer loginmodal">
+    <button type="button" class="btn btn-outline-dark" (click)="open(signup)">Sign Up?</button>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Log In</button>
+  </div>
+</ng-template>
+
+<!--                   SIGNUP                                                                     -->
+
+<ng-template #signup let-modal>
+  <div class="modal-header loginmodal">
+    <h4 class="modal-title" id="modal-basic-title">Sign Up</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body loginmodal">
+    <form [formGroup]=loginForm>
+      <input formControlName="name" type="text" name="txtName" class="form-control mb-2" placeholder="Your username *" />
+
+      <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" formControlName="email" type="email" class="form-control mb-4" placeholder="E-mail *">
+
+      <input formControlName="password" type="password" class="form-control mb-4" placeholder="Password *">
+      <input formControlName="password" type="password" class="form-control" placeholder="Retype Password *">
+
+
+    </form>
+  </div>
+  <div class="modal-footer loginmodal">
+    <button type="button" class="btn btn-outline-dark" >Sign Up</button>
+  </div>
+</ng-template>
