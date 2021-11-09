@@ -40,13 +40,13 @@
 
       <input formControlName="password" type="password" class="form-control mb-4" placeholder="Password">
 
-
+      <div class="modal-footer loginmodal">
+        <button type="button" class="btn btn-outline-dark" (click)="open(signup)">Sign Up?</button>
+        <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Log In</button>
+      </div>
     </form>
   </div>
-  <div class="modal-footer loginmodal">
-    <button type="button" class="btn btn-outline-dark" (click)="open(signup)">Sign Up?</button>
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Log In</button>
-  </div>
+  
 </ng-template>
 
 <!--                   SIGNUP                                                                     -->
@@ -67,10 +67,10 @@
       <input formControlName="password" type="password" class="form-control mb-4" placeholder="Password *">
       <input formControlName="password" type="password" class="form-control" placeholder="Retype Password *">
 
-
+      <div class="modal-footer loginmodal">
+        <button type="button" class="btn btn-outline-dark" >Sign Up</button>
+      </div>
     </form>
   </div>
-  <div class="modal-footer loginmodal">
-    <button type="button" class="btn btn-outline-dark" >Sign Up</button>
-  </div>
+  
 </ng-template>
