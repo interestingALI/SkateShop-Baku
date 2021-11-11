@@ -6,11 +6,11 @@
       <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
       <li><a routerLink="/aboutus" routerLinkActive="active-link">About us</a></li>
       <li><a routerLink="/contactus" routerLinkActive="active-link">Contact Us</a></li>
-      <li><a routerLink="/shop" routerLinkActive="active-link">Shop &#8250;</a></li>
+      <li><a routerLink="/shop" routerLinkActive="active-link">Shop <i class="fas fa-shopping-basket"></i></a></li>
     </ul>
 
 
-    <ul class="menu shopNacc">
+    <ul class="menu acc">
       <li ngbDropdown class="nav-item dropdown show">
         <a class="nav-link" ngbDropdownToggle><i class="fas fa-user-circle"></i></a>
         <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -19,10 +19,6 @@
           <div class="dropdown-divider"></div>
           <a ngbDropdownItem class="dropdown-item" style="color: red!important;" (click)='logout()'>Log out</a>
         </div>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i></a>
       </li>
     </ul>  
 </header>

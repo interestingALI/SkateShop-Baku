@@ -1,0 +1,26 @@
+@import "../../../styles.scss";
+
+.filters {
+  font-size: small;
+  background-color: $orangebase;
+}
+.filter {
+  margin-top: 5px;
+  background-color: $orangeverydark;
+  border: 1px solid #333;
+  &:hover {
+    color: black;
+    border: 1px solid black;
+    background-color: $orangedark;
+  }
+  &:focus {
+    color: white;
+    border: 2px solid red;
+    background-color: $orangeverydark;
+  }
+}
+input.shadow-none {
+  &:focus {
+    border: 2px solid blue;
+  }
+}

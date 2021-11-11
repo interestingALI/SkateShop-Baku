@@ -1,0 +1,33 @@
+@import "../../../../styles.scss";
+
+.mb-4 {
+  background-color: $orangelight;
+}
+.btn-outline-primary {
+  color: black;
+  background-color: $orangedark;
+  border: 1px solid black;
+  &:hover {
+    color: black;
+    border: 1px solid black;
+    background-color: $orangeverydark;
+  }
+  &:focus {
+    color: white;
+    border: 2px solid limegreen;
+    background-color: green !important;
+  }
+}
+
+.btn-outline-secondary {
+  color: black;
+  border: 1px solid black;
+  &:hover {
+    color: black;
+    border: 1px solid black;
+    background-color: $orangebase;
+  }
+  &:focus {
+    border: 2px solid limegreen;
+  }
+}

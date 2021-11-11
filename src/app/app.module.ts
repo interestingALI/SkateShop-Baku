@@ -13,6 +13,12 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PopularProductsComponent } from './popular-products/popular-products.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FirebaseService } from './services/firebase.service';
+import { ShopPageComponent } from './shop-page/shop-page.component';
+import { ProductsComponent } from './shop-page/products/products.component';
+import { FiltersComponent } from './shop-page/filters/filters.component';
+import { CartComponent } from './shop-page/cart/cart.component';
+import { CartItemComponent } from './shop-page/cart/cart-item/cart-item.component';
+import { ProductItemComponent } from './shop-page/products/product-item/product-item.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +28,12 @@ import { FirebaseService } from './services/firebase.service';
     HomeComponent,
     PagenotfoundComponent,
     PopularProductsComponent,
+    ShopPageComponent,
+    ProductsComponent,
+    FiltersComponent,
+    CartComponent,
+    CartItemComponent,
+    ProductItemComponent,
   ],
   imports: [
     NgbModule,
