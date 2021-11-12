@@ -1,11 +1,16 @@
 <div class="card mb-4 box-shadow">
-    <img class="card-img-top" src="../../../../assets/img/products/default.jpg" alt="Card image cap">
+    <img class="card-img-top" [src]="productItem.imageUrl" alt="Product Image">
     <div class="card-body">
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text">{{ 50 | currency:'USD' }}</p>
+        <h5>{{ productItem.name }}</h5>
+        <p class="card-text">{{ productItem.description }}</p>
+        <p class="card-text"><strong>{{  isNumber(productItem.price) ? (productItem.price | currency:'USD') : productItem.price }}</strong></p>
         <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-primary product-btn shadow-none">Add to cart</button>
+                <button *ngIf='productItem.price!="Out of Stock"'
+                type="button"
+                class="btn btn-sm btn-outline-primary product-btn shadow-none"
+                (click)='handleAddToCart()'
+                >Add to cart</button>
                 <button type="button" class="btn btn-sm btn-outline-secondary product-btn shadow-none">View Details</button>
             </div>
         </div>

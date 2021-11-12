@@ -3,6 +3,7 @@
 .filters {
   font-size: small;
   background-color: $orangebase;
+  margin-bottom: 15px;
 }
 .filter {
   margin-top: 5px;
@@ -21,6 +22,6 @@
 }
 input.shadow-none {
   &:focus {
-    border: 2px solid blue;
+    border: 2px solid green;
   }
 }
