@@ -1,0 +1,158 @@
+{
+    "products":[
+        {
+            "id": 1,
+            "name": "GLOBE NATIVES 8 COMPLETE-BOARD",
+            "description": "Medium concave, standard popsicle shape, Resin-7 Hardrock maple construction, seven plies of maple wood with epoxy resin, stronger and longer lasting than water-based decks",
+            "price": 89.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/nh_suFbBIT-FDjZ603pVFMZJ21E=/fit-in/420x490/filters:fill(white):brightness(-4)/product/140602-0-Globe-Natives8.jpg",
+            "category": "Skateboards",
+            "color": "Black"
+        },
+        {
+            "id": 2,
+            "name": "CHOCOLATE PEREZ VANNER 8.25 COMPLETE-BOARD (MULTI)",
+            "description": "Medium concave, standard popsicle shape, 7-ply maple construction, Stevie Perez pro model, Vanner Serie",
+            "price": 99.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/hi4QlN1yhLcKrCEj94v5tZaQ8EQ=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/150495-0-Chocolate-PerezVanner825.jpg",
+            "category": "Skateboards",
+            "color": "Yellow"
+        },
+        {
+            "id": 3,
+            "name": "SKATEDELUXE ROSE 8 COMPLETE-BOARD",
+            "description": "Medium concave, standard popsicle shape, 7-ply maple construction, Rose series",
+            "price": 109.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/c7buqZUmTLO_VclXNHL8TgLUkkc=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/132585-0-skatedeluxe-Rose8.jpg",
+            "category": "Skateboards",
+            "color": "Black"
+        },
+        {
+            "id": 4,
+            "name": "SKATEDELUXE RADIAL 8.25 COMPLETE-BOARD",
+            "description": "Medium concave, standard popsicle shape, 7-ply maple construction, Radial series",
+            "price": 109.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/CJCHb_7NsHxanpqOfIi17dlp8Zo=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/139293-0-skatedeluxe-Radial825.jpg",
+            "category": "Skateboards",
+            "color": "White"
+        },
+        {
+            "id": 5,
+            "name": "SKATEDELUXE ARCHITECTONIC 7.75 COMPLETE-BOARD",
+            "description": "Medium concave, standard popsicle shape, 7-ply maple construction, Architectonic series",
+            "price": 79.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/SITQBDf3tzUnbwkvGvwN8iPpqHs=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/139285-0-skatedeluxe-Architectonic775.jpg",
+            "category": "Skateboards",
+            "color": "White"
+        },
+        {
+            "id": 6,
+            "name": "TOY MACHINE FURRY MONSTER 8.25 COMPLETE-BOARD",
+            "description": "Medium concave, standard popsicle shape, 7-ply maple construction",
+            "price": 124.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/2Vaj6tgrSLQKMRyDNqX92Po6W6k=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/141369-0-ToyMachine-FurryMonster825.jpg",
+            "category": "Skateboards",
+            "color": "Red"
+        },
+        {
+            "id": 7,
+            "name": "SKATEDELUXE DRAGON 8.125 DECK",
+            "description": "Width: 8.125 inch, Length: 31.9 inch",
+            "price": 54.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/egTKwrd6EsI9OjAtahDiDVhCXQc=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/146051-0-skatedeluxe-Dragon8125.jpg",
+            "category": "Decks",
+            "color": "White"
+        },
+        {
+            "id": 8,
+            "name": "FLIP PENNY DOTS REBOOT 8 DECK",
+            "description": "Width: 8 inch, Length: 31.5 inch",
+            "price": 64.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/6ZNxDFPt3i86wnltj5gHrvbvoTo=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/147746-0-Flip-PennyDotsReboot8.jpg",
+            "category": "Decks",
+            "color": "Red"
+        },
+        {
+            "id": 9,
+            "name": "SKATEDELUXE PRAY 8.375 DECK",
+            "description": "Width: 8.375 inch, Length: 32 inch",
+            "price": 54.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/mFLWaaccTXPQl9JjGlaqgRdFI44=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/138767-0-SK8DLX-Pray8375.jpg",
+            "category": "Decks",
+            "color": "Blue"
+        },
+        {
+            "id": 10,
+            "name": "INDEPENDENT 144 MID TRUCK 8.25",
+            "description": "Cast baseplate, lower profile hanger, height: 52 mm (mid), weight: 398 g",
+            "price": 37.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/mFLWaaccTXPQl9JjGlaqgRdFI44=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/138767-0-SK8DLX-Pray8375.jpg",
+            "category": "Trucks",
+            "color": "Polished"
+        },
+        {
+            "id": 11,
+            "name": "ACE 44 AF1 TRUCK 8.25",
+            "description": "Cast baseplate, refined casting process creates a 70% stronger integral structure of the aluminum, height: 52 mm (mid), weight: 387 g",
+            "price": 38.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/XG3y_S2KbNwgtOsvxTzEixaOtDg=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/148577-0-Ace-44AF1.jpg",
+            "category": "Trucks",
+            "color": "Polished"
+        },
+        {
+            "id": 11,
+            "name": "BONES STF DECENZO GIZZMO V2 WHEELS 53MM 103A 4 PACK",
+            "description": "Size: 53 mm, Contact patch: 15 mm, Width: 29 mm",
+            "price": 54.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/WfIe6Mgm26xVGy8Czrxvg5TpOk0=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/150561-0-Bones-STFDecenzoGizzmoV2.jpg",
+            "category": "Wheels",
+            "color": "Yellow"
+        },
+        {
+            "id": 12,
+            "name": "HAZE WHEELS PRIME CUT PARK SPECIALS V5 WHEELS",
+            "description": "Size: 56 mm, Contact patch: 18.5 mm, Width: 34 mm",
+            "price": 39.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/OBQgRKIMNIjLbKOQwU90Bfv7zOs=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/141363-0-HazeWheels-PrimeCutParkSpecialsV5.jpg",
+            "category": "Wheels",
+            "color": "White"
+        },
+        {
+            "id": 13,
+            "name": "SKATEDELUXE FIDELITY SERIES WHEELS 53MM",
+            "description": "Size: 56 mm, Contact patch: 18.5 mm, Width: 34 mm",
+            "price": 29.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/Vue4vBqt7HIjs8G5C7Q0eeo_t8g=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/125408-0-SK8DLX-FidelitySeries.jpg",
+            "category": "Wheels",
+            "color": "Black"
+        },
+        {
+            "id": 14,
+            "name": "SKATEDELUXE NIGHTS ABEC7 BEARINGS",
+            "description": "Contents: 8 x SK8DLX Nights bearings, 4 x spacer, 8 x speedrings",
+            "price": 24.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/yojL0BTlncEKFZJVYJx0y6XGvJg=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/83544-0-SK8DLX-NightsABEC7.jpg",
+            "category": "Bearings",
+            "color": "Black"
+        },
+        {
+            "id": 15,
+            "name": "BONES BEARINGS REDS BEARINGS",
+            "description": "Pre-lubricated with Speed Cream™ racing lubricant. Skate Rated™",
+            "price": 24.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/18E0v8BVE91jK6aKkILpJZngtZs=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/2729-0-BonesBearings-Reds.jpg",
+            "category": "Bearings",
+            "color": "Red"
+        },
+        {
+            "id": 16,
+            "name": "BONES BEARINGS SUPER SWISS 6 BEARINGS INKL. SPACER",
+            "description": "Skate Rated™ and Swiss precision manufacturing. made in Switzerland",
+            "price": 104.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/bxrqgUlROxv9bpc-zBfi5V-Qazw=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/2731-0-BonesBearings-SuperSwiss6.jpg",
+            "category": "Bearings",
+            "color": "Blue"
+        }
+    ],
+    "cart": []
+}

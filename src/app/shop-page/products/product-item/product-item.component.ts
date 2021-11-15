@@ -16,14 +16,6 @@ export class ProductItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  isNumber(value: string | number): boolean {
-   return (
-      (value != null) &&
-      (value !== '') &&
-      !isNaN(Number(value.toString()))
-  );
-  }
-
   handleAddToCart(){
     this.msg.sendMsg(this.productItem)
   }

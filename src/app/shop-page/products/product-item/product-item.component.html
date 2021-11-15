@@ -3,7 +3,8 @@
     <div class="card-body">
         <h5>{{ productItem.name }}</h5>
         <p class="card-text">{{ productItem.description }}</p>
-        <p class="card-text"><strong>{{  isNumber(productItem.price) ? (productItem.price | currency:'USD') : productItem.price }}</strong></p>
+        <p class="card-text" style="color: #555; margin-bottom: 0!important;"><small>{{productItem.category}} , {{productItem.color}}</small></p>
+        <p class="card-text"><strong>{{  productItem.price == 0 ?  'Out of Stock' : (productItem.price | currency:'USD') }}</strong></p>
         <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
                 <button *ngIf='productItem.price!="Out of Stock"'
