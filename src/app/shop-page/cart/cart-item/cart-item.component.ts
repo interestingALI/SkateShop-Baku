@@ -18,6 +18,5 @@ export class CartItemComponent implements OnInit {
     this.onRemove.emit(theItem);
   }
 
-  
 
 }

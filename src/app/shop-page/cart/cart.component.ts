@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
+import { CartService } from 'src/app/services/cart.service';
+import { CartItem } from 'src/app/models/cart-item';
 import { MessengerService } from 'src/app/services/messenger.service';
 
 @Component({
@@ -13,21 +15,53 @@ export class CartComponent implements OnInit {
 
   cartTotal = 0
 
-  constructor(private msg: MessengerService) { }
+  constructor(private msg: MessengerService, private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.handleSubscription()
+    this.loadCartItems()
+  }
+
+  handleSubscription(){
     this.msg.getMsg().subscribe((product: Product) =>{
-      this.addProductToCart(product)
+      this.loadCartItems()
     })
   }
 
-  execOnRemove(itemRemoved) {
-    itemRemoved.qty -= 1
-    if (itemRemoved.qty == 0) {
-      this.cartItems.splice(this.cartItems.indexOf(itemRemoved), 1);
-    }
-    this.calcTotal()
+  loadCartItems(){
+    this.cartService.getCartItems().subscribe((items:CartItem[]) => {
+      this.cartItems = this.savedItems ? this.savedItems : items;
+      this.calcTotal()
+    })
+    this.savedItems = false
   }
+
+  savedItems:any = false;
+  execOnRemove(itemRemoved) {
+    this.loadCartItems()
+    this.cartService.getCartItems().subscribe((items:CartItem[]) => {
+      
+
+      for (let products of this.cartItems) {
+        if (products.id == itemRemoved.id) {
+          products.qty -= 1
+        }
+
+        if (products.qty == 0) {
+          this.cartItems.splice(this.cartItems.indexOf(products), 1);
+        }
+
+      }
+      
+      this.savedItems = this.cartItems
+      this.calcTotal()
+    })
+    this.loadCartItems()
+  }
+
+
+
+  
 
   calcTotal(){
     this.cartTotal = 0
@@ -35,32 +69,5 @@ export class CartComponent implements OnInit {
       this.cartTotal += (item.qty * item.price)
     })
   }
-
-  addProductToCart(product: Product){
-    let productExists = false
-
-
-    for(let i in this.cartItems){
-      if (this.cartItems[i].productId === product.id) {
-        this.cartItems[i].qty++
-        productExists = true
-        break;
-      }
-    }
-
-
-    if (!productExists) {
-      this.cartItems.push({
-        productId:product.id,
-        productName: product.name,
-        qty: 1,
-        price: product.price
-      })
-    }
-
-    this.calcTotal()
-  }
-
-  
 
 }

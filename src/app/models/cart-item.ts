@@ -1,4 +1,3 @@
-import { productsUrl } from "../config/api";
 import { Product } from "./product";
 
 export class CartItem {
@@ -7,8 +6,8 @@ export class CartItem {
     qty: number;
     price: number;
 
-    constructor(id, product: Product, qty = 1){
-        this.id = id
+    constructor(id:number, product: Product, qty = 1){
+        this.id = product.id
         this.name = product.name
         this.price = product.price
         this.qty = qty
