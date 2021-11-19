@@ -38,10 +38,9 @@ export class CartComponent implements OnInit {
 
   savedItems:any = false;
   execOnRemove(itemRemoved) {
-    this.loadCartItems()
+
     this.cartService.getCartItems().subscribe((items:CartItem[]) => {
       
-
       for (let products of this.cartItems) {
         if (products.id == itemRemoved.id) {
           products.qty -= 1
@@ -55,8 +54,8 @@ export class CartComponent implements OnInit {
       
       this.savedItems = this.cartItems
       this.calcTotal()
+
     })
-    this.loadCartItems()
   }
 
 
