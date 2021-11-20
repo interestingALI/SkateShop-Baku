@@ -31,3 +31,6 @@
     border: 2px solid limegreen;
   }
 }
+::ng-deep .ngxImageZoomContainer > img {
+  width: 100%;
+}
