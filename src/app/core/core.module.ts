@@ -5,7 +5,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { ShopPageModule } from '../shop-page/shop-page.module';
 
 
 @NgModule({
@@ -19,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     ReactiveFormsModule,
     FormsModule,
+    ShopPageModule
   ],
   exports: [
     NavbarComponent,

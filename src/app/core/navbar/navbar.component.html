@@ -3,12 +3,11 @@
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
-      <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
-      <li><a routerLink="/aboutus" routerLinkActive="active-link">About us</a></li>
-      <li><a routerLink="/contactus" routerLinkActive="active-link">Contact Us</a></li>
+      <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Home <i class="fas fa-home"></i></a></li>
+      <li><a routerLink="/aboutus" routerLinkActive="active-link">About us <i class="fas fa-users"></i></a></li>
+      <li><a routerLink="/contactus" routerLinkActive="active-link">Contact Us <i class="fas fa-phone-alt"></i></a></li>
       <li><a routerLink="/shop" routerLinkActive="active-link">Shop <i class="fas fa-shopping-basket"></i></a></li>
     </ul>
-
 
     <ul class="menu acc">
       <li ngbDropdown class="nav-item dropdown show">
@@ -19,6 +18,9 @@
           <div class="dropdown-divider"></div>
           <a ngbDropdownItem class="dropdown-item" style="color: red!important;" (click)='logout()'>Log out</a>
         </div>
+      </li>
+      <li class="nav-item">
+        <a (click)="open(cart)"><i class="fas fa-shopping-cart"></i> Cart</a>
       </li>
     </ul>  
 </header>
@@ -68,4 +70,20 @@
     </form>
   </div>
   
+</ng-template>
+
+<!-- CART -->
+
+<ng-template #cart let-modal>
+
+  <div class="modal-header loginmodal">
+    <h4 class="modal-title" id="modal-basic-title">Your Cart</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body loginmodal">
+    <app-cart></app-cart>
+  </div>
+
 </ng-template>

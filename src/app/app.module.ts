@@ -8,18 +8,13 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 import { CoreModule } from "./core/core.module";
+import { ShopPageModule } from './shop-page/shop-page.module';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PopularProductsComponent } from './popular-products/popular-products.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FirebaseService } from './services/firebase.service';
-import { ShopPageComponent } from './shop-page/shop-page.component';
-import { ProductsComponent } from './shop-page/products/products.component';
-import { FiltersComponent } from './shop-page/filters/filters.component';
-import { CartComponent } from './shop-page/cart/cart.component';
-import { CartItemComponent } from './shop-page/cart/cart-item/cart-item.component';
-import { ProductItemComponent } from './shop-page/products/product-item/product-item.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
@@ -30,13 +25,6 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
     HomeComponent,
     PagenotfoundComponent,
     PopularProductsComponent,
-    ShopPageComponent,
-    ProductsComponent,
-    FiltersComponent,
-    CartComponent,
-    CartItemComponent,
-    ProductItemComponent,
-    LoadingSpinnerComponent,
   ],
   imports: [
     NgbModule,
@@ -44,6 +32,7 @@ import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.compo
     HttpClientModule,
     AppRoutingModule,
     CoreModule,
+    ShopPageModule,
     ReactiveFormsModule,
     FormsModule,
     AngularFireModule.initializeApp({
