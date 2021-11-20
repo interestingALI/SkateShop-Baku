@@ -30,7 +30,6 @@ export class CartService {
             }
             if (!productExists) {
                 cartItems.push(new CartItem(item.id, item.product))
-                console.log(item.product)
             }
           }
 
