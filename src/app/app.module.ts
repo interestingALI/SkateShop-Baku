@@ -20,6 +20,7 @@ import { FiltersComponent } from './shop-page/filters/filters.component';
 import { CartComponent } from './shop-page/cart/cart.component';
 import { CartItemComponent } from './shop-page/cart/cart-item/cart-item.component';
 import { ProductItemComponent } from './shop-page/products/product-item/product-item.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ProductItemComponent } from './shop-page/products/product-item/product-
     CartComponent,
     CartItemComponent,
     ProductItemComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     NgbModule,

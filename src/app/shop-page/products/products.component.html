@@ -1,4 +1,5 @@
-<div class="row">
+<app-loading-spinner *ngIf="this.showSpinner"></app-loading-spinner>
+<div class="row">  
     <div class="col-md-4" *ngFor='let product of productsList'>
         <app-product-item [productItem]='product'></app-product-item>
     </div>

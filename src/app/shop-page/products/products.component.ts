@@ -7,15 +7,21 @@ import { ProductService } from 'src/app/services/product.service';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
+
 export class ProductsComponent implements OnInit {
 
   productsList:Product[]=[]
 
+  
   constructor(private productService: ProductService){}
+
+  showSpinner:boolean = true;
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe((products) => {
-      this.productsList = products    })
+      this.productsList = products;  
+      this.showSpinner = false;
+    })
   }
 
 }
