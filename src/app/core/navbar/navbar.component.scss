@@ -201,13 +201,13 @@ input.ng-valid {
 .dropdown-menu {
   right: 0 !important;
 }
+.brdr-btm > li > a:hover {
+  border-bottom: 1px solid #222;
+}
 ////////////////////////////////////////////////
 @media (min-width: 992px) {
   .header li {
     float: left;
-  }
-  .header li a {
-    padding: 20px 30px;
   }
   .header .menu {
     clear: none;

@@ -1,13 +1,7 @@
 <div class="card mb-4 box-shadow">
-    <lib-ngx-image-zoom class="card-img-top"
-    [thumbImage]=productItem.imageUrl
-    [fullImage]=productItem.imageUrl
-    [magnification]=1
-    [enableScrollZoom]="true"
-    [enableLens]="true"
-    [lensWidth]="200"
-    [lensHeight]="200"
-    ></lib-ngx-image-zoom>
+
+    <div class="img-wrapper"><img [src]="productItem.imageUrl" alt="product" class="card-img-top"></div>
+
     <div class="card-body">
         <h5>{{ productItem.name }}</h5>
         <p class="card-text">{{ productItem.description | slice:0:80}}..</p>

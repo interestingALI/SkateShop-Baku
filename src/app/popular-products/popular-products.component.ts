@@ -9,7 +9,7 @@ import { ProductService } from '../services/product.service';
 })
 export class PopularProductsComponent implements OnInit {
 
-  productsList:Product[]=[]
+  popularList:Product[]=[]
 
   
   constructor(private productService: ProductService){}
@@ -17,7 +17,7 @@ export class PopularProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe((products) => {
-      this.productsList = products;  
+      this.popularList =[ products[2], products[5], products[11], ]
     })
   }
 

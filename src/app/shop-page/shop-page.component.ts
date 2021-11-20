@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 
 export class ShopPageComponent implements OnInit {
 
-  constructor() { }
+  
 
+  constructor() { }
+  
   ngOnInit(): void {
   }
-
+  
 }

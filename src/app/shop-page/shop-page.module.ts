@@ -7,7 +7,6 @@ import { FiltersComponent } from './filters/filters.component';
 import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
-import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 @NgModule({
     declarations: [
@@ -21,7 +20,6 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
     ],
     imports: [
         CommonModule,
-        NgxImageZoomModule
     ],
     exports: [
         ShopPageComponent,

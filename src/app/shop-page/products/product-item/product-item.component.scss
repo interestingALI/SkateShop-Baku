@@ -31,6 +31,14 @@
     border: 2px solid limegreen;
   }
 }
-::ng-deep .ngxImageZoomContainer > img {
-  width: 100%;
+
+.img-wrapper {
+  overflow: hidden;
+}
+.card-img-top {
+  transition: 0.3s;
+  &:hover {
+    cursor: zoom-in;
+    transform: scale(1.6);
+  }
 }
