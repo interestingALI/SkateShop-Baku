@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -11,10 +11,13 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductsComponent implements OnInit {
 
   productsList:Product[]=[]
+  @Input() color = '';
+  @Input() SortbyParam = '';
+  @Input() SortDirection = 'asc';
+  
 
   
   constructor(private productService: ProductService){}
-
   showSpinner:boolean = true;
 
   ngOnInit(): void {
@@ -25,3 +28,4 @@ export class ProductsComponent implements OnInit {
   }
 
 }
+

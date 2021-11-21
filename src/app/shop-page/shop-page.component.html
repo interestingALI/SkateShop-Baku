@@ -1,11 +1,91 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <app-filters></app-filters>
+            <div class="card filters">
+
+                <div class="card-header">
+                    <strong>Filters</strong>
+                </div>
+            
+                <div class="card-body">
+                    <div *ngIf="!isMobileLayout">
+                        <div class="from-group">
+                            <label for="from">From</label>
+                            <input type="number" id="from" class="form-control shadow-none" min="0" >
+                        </div>
+                        <div class="from-group">
+                            <label for="to">To</label>
+                            <input type="number" id="to" class="form-control shadow-none" min="0" >
+                        </div>
+                        <button class="btn btn-primary btn-block btn-sm filter shadow-none">Filter by Price</button>
+                    
+                        <div class="filter-color">
+                            <label>Filter by color</label>
+                            <input type="text" [(ngModel)]='color'>
+                        </div>    
+
+                        <div class="filter-color">
+                            <label style="margin-right: 5px;">Sort by:</label>
+                            <select class="filter-color" [(ngModel)] = 'SortbyParam'>
+                                <option value="name">Name</option>
+                                <option value="price">Price</option>
+                                <option value="color">Color</option>
+                            </select>
+                            <button class="sort" (click)="onSortDirection()">
+                                <i *ngIf="SortDirection==='asc'" class="fas fa-chevron-up"></i>
+                                <i *ngIf="SortDirection==='desc'" class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>    
+                    </div>
+            
+            
+                            <!-- -- MOBILE LAYOUT -- -->
+            
+                    <div ngbDropdown *ngIf="isMobileLayout">
+                        <button class="btn btn-outline-primary btn-100 filter shadow-none" ngbDropdownToggle>Open Filters</button>
+                            <div class="dropdown-menu" ngbDropdownMenu>
+                                <div>
+                                    <div class="from-group">
+                                        <label style="margin-bottom: 5px;" for="from">From</label>
+                                        <input type="number" id="from" class="form-control shadow-none" min="0" >
+                                    </div>
+                                
+                                
+                                    <div class="from-group">
+                                        <label style="margin-bottom: 5px;" for="to">To</label>
+                                        <input type="number" id="to" class="form-control shadow-none" min="0" >
+                                    </div>
+                                
+                                    <button style="width: 100%;" class="btn btn-primary btn-block btn-sm filter shadow-none">Filter by Price</button>
+                                    <!--         PRICE  ^^^                     -->
+                                
+                                    <div class="filter-color">
+                                        <label>Filter by color</label>
+                                        <input class="form-control shadow-none" type="text" [(ngModel)]='color'>
+                                    </div>    
+
+                                    <div class="filter-color">
+                                        <label style="margin-right: 5px;">Sort by:</label>
+                                        <select class="filter-color" [(ngModel)] = 'SortbyParam'>
+                                            <option value="name">Name</option>
+                                            <option value="price">Price</option>
+                                            <option value="color">Color</option>
+                                        </select>
+                                        <button class="sort" (click)="onSortDirection()">
+                                            <i *ngIf="SortDirection==='asc'" class="fas fa-chevron-up"></i>
+                                            <i *ngIf="SortDirection==='desc'" class="fas fa-chevron-down"></i>
+                                        </button>
+                                    </div>     
+
+                                </div>
+                            </div>
+                    </div>   
+                </div>
+            </div>
         </div>    
     
         <div class="col-md-8">
-            <app-products></app-products>
+            <app-products [SortDirection]="SortDirection" [SortbyParam]="SortbyParam" [color]="color"></app-products>
         </div>    
     
         <div class="col">
