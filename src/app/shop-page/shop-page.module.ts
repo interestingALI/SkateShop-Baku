@@ -7,6 +7,7 @@ import { FiltersComponent } from './filters/filters.component';
 import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     imports: [
         CommonModule,
         SimpleNotificationsModule.forRoot(),
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        NgbModule
     ],
     exports: [
         ShopPageComponent,

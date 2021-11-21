@@ -6,6 +6,7 @@
   margin-bottom: 15px;
 }
 .filter {
+  color: white;
   margin-top: 5px;
   background-color: $orangeverydark;
   border: 1px solid #333;
@@ -19,9 +20,21 @@
     border: 2px solid red;
     background-color: $orangeverydark;
   }
+  &:active {
+    box-shadow: none;
+  }
 }
 input.shadow-none {
   &:focus {
     border: 2px solid green;
   }
+}
+.btn-100 {
+  width: 100%;
+}
+.dropdown-menu {
+  margin-top: 10px;
+  width: 100%;
+  padding: 15px;
+  background-color: $orangelight;
 }

@@ -9,7 +9,9 @@ export class FiltersComponent implements OnInit {
 
   constructor() { }
 
+  isMobileLayout = false;
   ngOnInit(): void {
+    window.onresize = () => this.isMobileLayout = window.innerWidth <= 768;
   }
 
 }
