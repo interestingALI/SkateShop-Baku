@@ -11,6 +11,10 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilterPipe } from '../pipes/filter.pipe';
+import { SortPipe } from '../pipes/sort.pipe';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -21,13 +25,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         FiltersComponent,
         CartComponent,
         CartItemComponent,
-        LoadingSpinnerComponent
+        LoadingSpinnerComponent,
+        FilterPipe,
+        SortPipe,
     ],
     imports: [
         CommonModule,
         SimpleNotificationsModule.forRoot(),
         BrowserAnimationsModule,
-        NgbModule
+        NgbModule,
+        FormsModule
     ],
     exports: [
         ShopPageComponent,
