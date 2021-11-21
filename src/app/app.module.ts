@@ -15,7 +15,6 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PopularProductsComponent } from './popular-products/popular-products.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FirebaseService } from './services/firebase.service';
-import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
