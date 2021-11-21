@@ -15,6 +15,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PopularProductsComponent } from './popular-products/popular-products.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FirebaseService } from './services/firebase.service';
+import { SimpleNotificationsModule } from 'angular2-notifications';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { FirebaseService } from './services/firebase.service';
     ShopPageModule,
     ReactiveFormsModule,
     FormsModule,
+    SimpleNotificationsModule.forRoot(),
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp({
     apiKey: "AIzaSyAZSTvtlt-dPNHj9jlHwufFsVkYQRFiEdE",
     authDomain: "skateshopbaku.firebaseapp.com",

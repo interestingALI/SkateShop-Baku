@@ -8,6 +8,10 @@ import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
 
+import { SimpleNotificationsModule } from 'angular2-notifications';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
     declarations: [
         ShopPageComponent,
@@ -20,6 +24,8 @@ import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.comp
     ],
     imports: [
         CommonModule,
+        SimpleNotificationsModule.forRoot(),
+        BrowserAnimationsModule
     ],
     exports: [
         ShopPageComponent,

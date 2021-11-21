@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
 import { MessengerService } from 'src/app/services/messenger.service';
+import { NotificationsService } from 'angular2-notifications';
 
 @Component({
   selector: 'app-product-item',
@@ -14,8 +15,18 @@ export class ProductItemComponent implements OnInit {
 
   constructor(
     private msg: MessengerService,
-    private cartService: CartService
+    private cartService: CartService,
+    private service: NotificationsService
   ) { }
+
+  onSuccess(message){
+    this.service.success('Success', message, {
+      position: ['bottom', 'right'],
+      timeOut: 2000,
+      animate: 'fade',
+      showProgressBar: true
+    });
+  }
 
   ngOnInit(): void {
   }
@@ -25,4 +36,5 @@ export class ProductItemComponent implements OnInit {
       this.msg.sendMsg(this.productItem)
     })
   }
+
 }
