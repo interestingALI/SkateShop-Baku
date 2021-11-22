@@ -26,5 +26,9 @@ export class ShopPageComponent implements OnInit {
       this.SortDirection = 'desc'
     }
   }
+
+  filterColor(color){
+    this.color = color;
+  }
   
 }

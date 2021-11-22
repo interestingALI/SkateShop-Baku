@@ -48,7 +48,26 @@ input.shadow-none {
 }
 .filter-color {
   margin-top: 10px;
+  padding-top: 5px;
   font-size: 14px;
+  border-top: 1px solid orange;
+  &:first-child {
+    border-top: none;
+    margin-top: 0px;
+  }
+}
+.color-filter-button {
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.text-shadow-around {
+  text-shadow: 0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black,
+    -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black,
+    0.05em 0.05em black;
 }
 .sort {
   width: 25px;
