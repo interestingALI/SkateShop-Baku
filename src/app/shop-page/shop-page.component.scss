@@ -15,7 +15,7 @@
 }
 .filter {
   color: white;
-  margin-top: 5px;
+  margin-top: 10px;
   background-color: #be8f0e;
   border: 1px solid #333;
   &:hover {
@@ -95,4 +95,12 @@ input.shadow-none {
   margin-bottom: 10px;
   padding-bottom: 5px;
   border-bottom: 1px solid orange;
+}
+.sortMobile {
+  width: 150px;
+  height: 30px;
+}
+.sortBtnMobile {
+  width: 30px;
+  height: 30px;
 }

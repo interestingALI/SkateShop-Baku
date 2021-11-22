@@ -41,4 +41,11 @@ export class ShopPageComponent implements OnInit {
     this.category = category;
   }
 
+  clearFilters(){
+    this.color = '';
+    this.category = '';
+    this.from =''
+    this.to=''
+  }
+
 }

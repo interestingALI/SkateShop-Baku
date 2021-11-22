@@ -22,9 +22,10 @@ export class ProductItemComponent implements OnInit {
   onSuccess(message){
     this.service.success('Success', message, {
       position: ['bottom', 'right'],
-      timeOut: 2000,
+      timeOut: 1500,
       animate: 'fade',
-      showProgressBar: true
+      showProgressBar: true,
+      clickToClose: true
     });
   }
 

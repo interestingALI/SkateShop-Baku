@@ -7,15 +7,7 @@
                     <strong>Filters</strong>
                 </div>
 
-            
                 <div class="card-body">
-
-
-
-                    
-
-
-
                     <div *ngIf="!isMobileLayout">
 
                         <div class="priceFilter">
@@ -63,8 +55,9 @@
                                 <i *ngIf="SortDirection==='desc'" class="fas fa-chevron-down"></i>
                             </button>
                         </div>    
+
+                        <button (click)="clearFilters()" class="form-control shadow-none filter">Clear all Filters</button>
                     </div>
-            
             
                             <!-- -- MOBILE LAYOUT -- -->
             
@@ -106,18 +99,19 @@
                                 </div>     
 
                                 <div class="filter-options">
-                                    <label style="margin-right: 5px;">Sort by:</label>
-                                    <select [(ngModel)] = 'SortbyParam'>
+                                    <h6 style="margin-right: 5px;">Sort by:</h6>
+                                    <select class="sortMobile" [(ngModel)] = 'SortbyParam'>
                                         <option value="name">Name</option>
                                         <option value="price">Price</option>
                                         <option value="color">Color</option>
                                     </select>
-                                    <button class="sort" (click)="onSortDirection()">
+                                    <button class="sort sortBtnMobile" (click)="onSortDirection()">
                                         <i *ngIf="SortDirection==='asc'" class="fas fa-chevron-up"></i>
                                         <i *ngIf="SortDirection==='desc'" class="fas fa-chevron-down"></i>
                                     </button>
                                 </div>     
 
+                                <button (click)="clearFilters()" class="form-control shadow-none filter">Clear all Filters</button>
                             </div>
                         </div>
                     </div>   
