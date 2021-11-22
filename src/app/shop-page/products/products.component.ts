@@ -14,8 +14,8 @@ export class ProductsComponent implements OnInit {
   @Input() color = '';
   @Input() SortbyParam = '';
   @Input() SortDirection = 'asc';
+  @Input() property = "";
   
-
   
   constructor(private productService: ProductService){}
   showSpinner:boolean = true;
