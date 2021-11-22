@@ -64,6 +64,11 @@ input.shadow-none {
     text-decoration: underline;
   }
 }
+.background {
+  padding: 5px 0 5px 0;
+  background-color: #edb82860;
+  border-radius: 20px;
+}
 .text-shadow-around {
   text-shadow: 0.05em 0 black, 0 0.05em black, -0.05em 0 black, 0 -0.05em black,
     -0.05em -0.05em black, -0.05em 0.05em black, 0.05em -0.05em black,
