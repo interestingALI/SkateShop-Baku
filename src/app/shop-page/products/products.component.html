@@ -1,6 +1,6 @@
 <app-loading-spinner *ngIf="this.showSpinner"></app-loading-spinner>
 <div class="row">  
-    <div class="col-md-4" *ngFor="let product of productsList|filter:color:property|sort:[SortbyParam, SortDirection]">
+    <div class="col-md-4" *ngFor="let product of productsList|filter:color:'color'|filter:category:'category'|sort:[SortbyParam, SortDirection]">
         <app-product-item [productItem]='product'></app-product-item>
     </div>
 </div>    

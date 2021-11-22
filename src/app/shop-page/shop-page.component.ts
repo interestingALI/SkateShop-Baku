@@ -11,7 +11,7 @@ export class ShopPageComponent implements OnInit {
   color=''
   SortbyParam=''
   SortDirection='asc'
-  property=''
+  category=''
 
   constructor() { }
   
@@ -28,9 +28,12 @@ export class ShopPageComponent implements OnInit {
     }
   }
 
-  filterBy(color, property){
+  filterByColor(color){
     this.color = color;
-    this.property = property;
+  }
+
+  filterByCategory(category){
+    this.category = category;
   }
   
 }

@@ -12,22 +12,22 @@
                         
                         <div class="filter-color">
                             <h5>Filter by color:</h5>
-                            <p class="color-filter-button" (click)="filterBy('', 'color')"><span style="color: black">Show every</span> Color <i class="fas fa-palette"></i></p>
-                            <p class="color-filter-button" (click)="filterBy('Red', 'color')"><span style="color: red">Red</span> Color</p>
-                            <p class="color-filter-button" (click)="filterBy('Blue', 'color')"><span style="color: Blue">Blue</span> Color</p>
-                            <p class="color-filter-button" (click)="filterBy('Yellow', 'color')"><span class="text-shadow-around"  style="color: Yellow">Yellow</span> Color</p>
-                            <p class="color-filter-button" (click)="filterBy('Black', 'color')"><span style="color: Black">Black</span> Color</p>
-                            <p class="color-filter-button" (click)="filterBy('White', 'color')"><span class="text-shadow-around" style="color: White">White</span> Color</p>
+                            <p class="color-filter-button" (click)="filterByColor('')"><span style="color: black">Show every</span> Color <i class="fas fa-palette"></i></p>
+                            <p class="color-filter-button" (click)="filterByColor('Red')"><span style="color: red">Red</span> Color</p>
+                            <p class="color-filter-button" (click)="filterByColor('Blue')"><span style="color: Blue">Blue</span> Color</p>
+                            <p class="color-filter-button" (click)="filterByColor('Yellow')"><span class="text-shadow-around"  style="color: Yellow">Yellow</span> Color</p>
+                            <p class="color-filter-button" (click)="filterByColor('Black')"><span style="color: Black">Black</span> Color</p>
+                            <p class="color-filter-button" (click)="filterByColor('White')"><span class="text-shadow-around" style="color: White">White</span> Color</p>
                         </div>  
 
                         <div class="filter-options">
                             <h5>Filter by product category:</h5>
-                            <p class="color-filter-button" (click)="filterBy('', 'category')">Show all categories <i class="fas fa-globe"></i></p>
-                            <p class="color-filter-button" (click)="filterBy('Skateboards', 'category')">Skateboards </p>
-                            <p class="color-filter-button" (click)="filterBy('Decks', 'category')">Decks </p>
-                            <p class="color-filter-button" (click)="filterBy('Trucks', 'category')">Trucks </p>
-                            <p class="color-filter-button" (click)="filterBy('Wheels', 'category')">Wheels </p>
-                            <p class="color-filter-button" (click)="filterBy('Bearings', 'category')">Bearings </p>
+                            <p class="color-filter-button" (click)="filterByCategory('')">Show all categories <i class="fas fa-globe"></i></p>
+                            <p class="color-filter-button" (click)="filterByCategory('Skateboards')">Skateboards </p>
+                            <p class="color-filter-button" (click)="filterByCategory('Decks')">Decks </p>
+                            <p class="color-filter-button" (click)="filterByCategory('Trucks')">Trucks </p>
+                            <p class="color-filter-button" (click)="filterByCategory('Wheels')">Wheels </p>
+                            <p class="color-filter-button" (click)="filterByCategory('Bearings')">Bearings </p>
                         </div>     
 
                         <div class="filter-color">
@@ -52,14 +52,24 @@
                         <button class="btn btn-outline-primary btn-100 filter shadow-none" ngbDropdownToggle>Open Filters</button>
                         <div class="dropdown-menu text-center" ngbDropdownMenu>
                             <div>
-                                <div class="filter-options">
+                                <div class="filter-color">
                                     <h5>Filter by color:</h5>
-                                    <p class="color-filter-button background" (click)="filterBy('', 'color')"><span style="color: black">Show every</span> Color <i class="fas fa-palette"></i></p>
-                                    <p class="color-filter-button background" (click)="filterBy('Red', 'color')"><span style="color: red">Red</span> Color</p>
-                                    <p class="color-filter-button background" (click)="filterBy('Blue', 'color')"><span style="color: Blue">Blue</span> Color</p>
-                                    <p class="color-filter-button background" (click)="filterBy('Yellow', 'color')"><span class="text-shadow-around"  style="color: Yellow">Yellow</span> Color</p>
-                                    <p class="color-filter-button background" (click)="filterBy('Black', 'color')"><span style="color: Black">Black</span> Color</p>
-                                    <p class="color-filter-button background" (click)="filterBy('White', 'color')"><span class="text-shadow-around" style="color: White">White</span> Color</p>
+                                    <p class="color-filter-button background" (click)="filterByColor('')"><span style="color: black">Show every</span> Color <i class="fas fa-palette"></i></p>
+                                    <p class="color-filter-button background" (click)="filterByColor('Red')"><span style="color: red">Red</span> Color</p>
+                                    <p class="color-filter-button background" (click)="filterByColor('Blue')"><span style="color: Blue">Blue</span> Color</p>
+                                    <p class="color-filter-button background" (click)="filterByColor('Yellow')"><span class="text-shadow-around"  style="color: Yellow">Yellow</span> Color</p>
+                                    <p class="color-filter-button background" (click)="filterByColor('Black')"><span style="color: Black">Black</span> Color</p>
+                                    <p class="color-filter-button background" (click)="filterByColor('White')"><span class="text-shadow-around" style="color: White">White</span> Color</p>
+                                </div>  
+        
+                                <div class="filter-options">
+                                    <h5>Filter by product category:</h5>
+                                    <p class="color-filter-button background" (click)="filterByCategory('')">Show all categories <i class="fas fa-globe"></i></p>
+                                    <p class="color-filter-button background" (click)="filterByCategory('Skateboards')">Skateboards </p>
+                                    <p class="color-filter-button background" (click)="filterByCategory('Decks')">Decks </p>
+                                    <p class="color-filter-button background" (click)="filterByCategory('Trucks')">Trucks </p>
+                                    <p class="color-filter-button background" (click)="filterByCategory('Wheels')">Wheels </p>
+                                    <p class="color-filter-button background" (click)="filterByCategory('Bearings')">Bearings </p>
                                 </div>     
 
                                 <div class="filter-options">
@@ -83,7 +93,7 @@
         </div>    
     
         <div class="col-md-8">
-            <app-products [SortDirection]="SortDirection" [SortbyParam]="SortbyParam" [color]="color" [property]="property"></app-products>
+            <app-products [SortDirection]="SortDirection" [SortbyParam]="SortbyParam" [color]="color" [category]="category"></app-products>
         </div>    
     
         <div class="col">
