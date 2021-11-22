@@ -8,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 
 export class ShopPageComponent implements OnInit {
 
+  console = console;
+
   color=''
   SortbyParam=''
   SortDirection='asc'
   category=''
+
+  from =''
+  to=''
 
   constructor() { }
   
@@ -35,5 +40,5 @@ export class ShopPageComponent implements OnInit {
   filterByCategory(category){
     this.category = category;
   }
-  
+
 }

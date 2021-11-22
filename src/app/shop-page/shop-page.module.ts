@@ -14,6 +14,8 @@ import { FilterPipe } from '../pipes/filter.pipe';
 import { SortPipe } from '../pipes/sort.pipe';
 import { FormsModule } from '@angular/forms';
 
+import { PriceFilterPipe } from '../pipes/price-filter.pipe';
+
 
 
 @NgModule({
@@ -26,6 +28,7 @@ import { FormsModule } from '@angular/forms';
         LoadingSpinnerComponent,
         FilterPipe,
         SortPipe,
+        PriceFilterPipe
     ],
     imports: [
         CommonModule,

@@ -15,6 +15,8 @@ export class ProductsComponent implements OnInit {
   @Input() SortbyParam = '';
   @Input() SortDirection = 'asc';
   @Input() category = '';
+  @Input() from= '';
+  @Input() to = '';
   
   
   constructor(private productService: ProductService){}
