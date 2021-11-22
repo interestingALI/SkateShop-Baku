@@ -3,6 +3,7 @@ import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
 import { MessengerService } from 'src/app/services/messenger.service';
 import { NotificationsService } from 'angular2-notifications';
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-product-item',
@@ -16,7 +17,8 @@ export class ProductItemComponent implements OnInit {
   constructor(
     private msg: MessengerService,
     private cartService: CartService,
-    private service: NotificationsService
+    private service: NotificationsService,
+    private modalService: NgbModal
   ) { }
 
   onSuccess(message){
@@ -36,6 +38,9 @@ export class ProductItemComponent implements OnInit {
     this.cartService.addProductToCart(this.productItem).subscribe(() => {
       this.msg.sendMsg(this.productItem)
     })
+  }
+  open(content) {
+    this.modalService.open(content, { windowClass : "ModalClassDetails"});
   }
 
 }

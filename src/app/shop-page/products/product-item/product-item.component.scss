@@ -42,3 +42,39 @@
     transform: scale(1.6);
   }
 }
+
+///////////////// DETAILS ////////////////////////
+
+.details {
+  width: 100%;
+  background-color: $orangelight;
+}
+.details > h4 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.details > .img-wrapper > .card-img-top {
+  &:hover {
+    cursor: auto;
+    transform: none;
+  }
+}
+.details > .img-wrapper {
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  border: 1px solid $orangedark;
+}
+.details > .desc {
+  padding: 15px;
+  padding-top: 5px;
+}
+.price {
+  float: right;
+  margin-right: 10px;
+  font-size: 24px;
+}
+.btn-d {
+  transform: scale(1.1);
+  margin-left: 10px;
+}

@@ -15,8 +15,41 @@
                 (click)='handleAddToCart()'
                 (click)="onSuccess('Item added to Cart Succesfully')"
                 >Add to cart <i class="far fa-plus-square"></i></button>
-                <button type="button" class="btn btn-sm btn-outline-secondary product-btn shadow-none">View Details <i class="fas fa-info-circle"></i></button>
+                <button
+                (click)="open(details)"
+                type="button"
+                class="btn btn-sm btn-outline-secondary product-btn shadow-none"
+                >View Details <i class="fas fa-info-circle"></i></button>
             </div>
         </div>
     </div>
 </div>
+
+
+
+<ng-template #details let-modal>
+    <div class="details">
+        <div class="img-wrapper"><img [src]="productItem.imageUrl" alt="product" class="card-img-top"></div>
+        <h4 class="text-center">{{ productItem.name }}</h4>
+        <p class="text-center" style="color: #555; margin-bottom: 0!important;"><small>{{productItem.category}} , {{productItem.color}}</small></p>
+        <h5 class="text-center">Product Description</h5>
+        <p class="desc text-center">{{ productItem.description }}</p>
+        <p class="price text-center"><strong>{{  productItem.price == 0 ?  'Out of Stock' : (productItem.price | currency:'USD') }}</strong></p>
+        <div class="btn btn-d text-center">
+            <div class="btn-group">
+                <button *ngIf='productItem.price!="Out of Stock"'
+                type="button"
+                class="btn btn-sm btn-outline-primary product-btn shadow-none"
+                (click)='handleAddToCart()'
+                (click)="onSuccess('Item added to Cart Succesfully')"
+                >Add to cart <i class="far fa-plus-square"></i></button>
+                <button
+                    (click)="modal.close()"
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary product-btn shadow-none"
+                    >Close Details <i class="far fa-times-circle"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</ng-template>
