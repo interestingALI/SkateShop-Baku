@@ -3,6 +3,8 @@ import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
 import { CartItem } from 'src/app/models/cart-item';
 import { MessengerService } from 'src/app/services/messenger.service';
+import { HttpClient } from '@angular/common/http';
+import { cartUrl } from '../../config/api';
 
 @Component({
   selector: 'app-cart',
@@ -15,7 +17,7 @@ export class CartComponent implements OnInit {
 
   cartTotal = 0
 
-  constructor(private msg: MessengerService, private cartService: CartService) { }
+  constructor(private msg: MessengerService, private cartService: CartService, private http: HttpClient) { }
   ngOnInit(): void {
     this.handleSubscription()
     this.loadCartItems()
