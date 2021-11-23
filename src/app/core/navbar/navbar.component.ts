@@ -14,8 +14,8 @@ export class NavbarComponent implements OnInit {
 
   isSignedIn = false;
   
-  account = JSON.parse(localStorage.getItem('user')) === null? '' : JSON.parse(localStorage.getItem('user')).email
-  
+  account = JSON.parse(localStorage.getItem('user')) === null ? '' : JSON.parse(localStorage.getItem('user')).email
+
   
   
 
@@ -66,6 +66,7 @@ export class NavbarComponent implements OnInit {
       this.isSignedIn = true
       this.modalService.dismissAll()
       this.account = JSON.parse(localStorage.getItem('user')).email
+      window.location.reload();
   }
   async onSignin(email:string, password:string){
     await this.firebaseService.signin(email,password)
@@ -73,12 +74,17 @@ export class NavbarComponent implements OnInit {
       this.isSignedIn = true
       this.modalService.dismissAll()
       this.account = JSON.parse(localStorage.getItem('user')).email
+      window.location.reload();  
   }
 
 
   logout(){
     this.firebaseService.logout()
+    if (!this.isSignedIn) {
+      return
+    }
     this.isSignedIn = false
+    window.location.reload(); 
   }
 
 
