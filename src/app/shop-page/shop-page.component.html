@@ -11,7 +11,7 @@
                     <div *ngIf="!isMobileLayout">
 
                         <div class="priceFilter">
-                            <h5>Filter Price:</h5>
+                            <h5>Filter by Price:</h5>
                             <div class="from-group">
                                 <label for="from">From</label>
                                 <input [(ngModel)]="from" type="number" id="from" class="form-control shadow-none" min="0" >
@@ -67,7 +67,7 @@
                             <div>
 
                                 <div class="priceFilter">
-                                    <h5>Filter Price</h5>
+                                    <h5>Filter by Price</h5>
                                     <div class="from-group">
                                         <label for="from">From</label>
                                         <input [(ngModel)]="from" type="number" id="from" class="form-control shadow-none" min="0" >
@@ -80,22 +80,27 @@
 
                                 <div class="filter-color">
                                     <h5>Filter by color:</h5>
-                                    <p class="color-filter-button background" (click)="filterByColor('')"><span style="color: black">Show every</span> Color <i class="fas fa-palette"></i></p>
-                                    <p class="color-filter-button background" (click)="filterByColor('Red')"><span style="color: red">Red</span> Color</p>
-                                    <p class="color-filter-button background" (click)="filterByColor('Blue')"><span style="color: Blue">Blue</span> Color</p>
-                                    <p class="color-filter-button background" (click)="filterByColor('Yellow')"><span class="text-shadow-around"  style="color: Yellow">Yellow</span> Color</p>
-                                    <p class="color-filter-button background" (click)="filterByColor('Black')"><span style="color: Black">Black</span> Color</p>
-                                    <p class="color-filter-button background" (click)="filterByColor('White')"><span class="text-shadow-around" style="color: White">White</span> Color</p>
+                                    <select class="sortMobile" [(ngModel)] = 'color'>
+                                        <option value="" class="color-filter-button background">Show all colors <i class="fas fa-palette"></i></option>
+                                        <option value="Red" class="color-filter-button background">Red Color</option>
+                                        <option value="Blue" class="color-filter-button background">Blue Color</option>
+                                        <option value="Yellow" class="color-filter-button background">Yellow Color</option>
+                                        <option value="Black" class="color-filter-button background">Black Color</option>
+                                        <option value="White" class="color-filter-button background">White Color</option>
+                                    </select>
                                 </div>  
         
                                 <div class="filter-options">
-                                    <h5>Filter by product category:</h5>
-                                    <p class="color-filter-button background" (click)="filterByCategory('')">Show all categories <i class="fas fa-globe"></i></p>
-                                    <p class="color-filter-button background" (click)="filterByCategory('Skateboards')">Skateboards </p>
-                                    <p class="color-filter-button background" (click)="filterByCategory('Decks')">Decks </p>
-                                    <p class="color-filter-button background" (click)="filterByCategory('Trucks')">Trucks </p>
-                                    <p class="color-filter-button background" (click)="filterByCategory('Wheels')">Wheels </p>
-                                    <p class="color-filter-button background" (click)="filterByCategory('Bearings')">Bearings </p>
+                                    <h5>Filter by category:</h5>
+
+                                    <select class="sortMobile" [(ngModel)] = 'category'>
+                                        <option value="" class="color-filter-button background">Show all categories</option>
+                                        <option value="Skateboards" class="color-filter-button background">Skateboards</option>
+                                        <option value="Decks" class="color-filter-button background">Decks</option>
+                                        <option value="Trucks" class="color-filter-button background">Trucks</option>
+                                        <option value="Wheels" class="color-filter-button background">Wheels</option>
+                                        <option value="Bearings" class="color-filter-button background">Bearings</option>
+                                    </select>
                                 </div>     
 
                                 <div class="filter-options">
