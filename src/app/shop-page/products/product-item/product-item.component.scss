@@ -60,6 +60,7 @@
   }
 }
 .details > .img-wrapper {
+  cursor: zoom-in;
   width: 90%;
   margin: auto;
   margin-top: 10px;
@@ -77,4 +78,7 @@
 .btn-d {
   transform: scale(1.1);
   margin-left: 10px;
+}
+::ng-deep .ngxImageZoomContainer > img {
+  width: 100% !important;
 }

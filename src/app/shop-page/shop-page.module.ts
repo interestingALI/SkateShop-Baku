@@ -16,6 +16,8 @@ import { FormsModule } from '@angular/forms';
 
 import { PriceFilterPipe } from '../pipes/price-filter.pipe';
 
+import { NgxImageZoomModule } from 'ngx-image-zoom';
+
 
 
 @NgModule({
@@ -35,7 +37,8 @@ import { PriceFilterPipe } from '../pipes/price-filter.pipe';
         SimpleNotificationsModule.forRoot(),
         BrowserAnimationsModule,
         NgbModule,
-        FormsModule
+        FormsModule,
+        NgxImageZoomModule
     ],
     exports: [
         ShopPageComponent,
