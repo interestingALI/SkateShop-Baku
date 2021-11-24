@@ -44,7 +44,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     projectId: "skateshopbaku",
     storageBucket: "skateshopbaku.appspot.com",
     messagingSenderId: "1043263125755",
-    appId: "1:1043263125755:web:0584acbd8572b9fc1e585e"
+    appId: "1:1043263125755:web:0584acbd8572b9fc1e585e",
+    databaseURL: "https://skateshopbaku-default-rtdb.europe-west1.firebasedatabase.app"
     })
   ],
   providers: [FirebaseService],

@@ -5,6 +5,8 @@ import { map } from 'rxjs/operators';
 import { CartItem } from '../models/cart-item';
 import { cartUrl } from '../config/api';
 import { Product } from '../models/product';
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/database'
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +21,7 @@ export class CartService {
       map((result:any[]) => {
         let cartItems: CartItem[] = []
 
+        if(result){
           for(let item of Object.values(result)){
             let productExists = false
             for(let i in cartItems){
@@ -29,16 +32,45 @@ export class CartService {
               }
             }
             if (!productExists) {
-                cartItems.push(new CartItem(item.id, item.product))
+              cartItems.push(new CartItem(item.id, item.product))
             }
           }
-
+        } else {
+          cartItems = []
+        }
         return cartItems
       })
     );
   }
 
+
+
   addProductToCart(product: Product): Observable<any>{
     return this.http.post(cartUrl, { product });
+  }
+
+  clearCart(){
+
+    let account = JSON.parse(localStorage.getItem('user')) === null ? '' : JSON.parse(localStorage.getItem('user')).email
+    account == '' ?  account = ['_default', ''] : account = /([^@]+)/.exec(account)
+
+    let adaRef = firebase.database().ref('/' + account[0] + '_user' + '/cart');
+
+    // let sumt = firebase.database().ref('/' + account[0] + '_user' + '/cart').orderByKey();
+
+    // sumt.once("value").then(function(snapshot) {
+    //   let key;
+    //     snapshot.forEach(function(childSnapshot) {
+          
+    //       key = childSnapshot.key;
+          
+    //     });
+    //     console.log(key)
+    //     console.log(snapshot.val())
+    // });
+
+
+    return adaRef.remove()
+
   }
 }

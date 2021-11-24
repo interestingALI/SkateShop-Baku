@@ -38,6 +38,8 @@
       <input type="email" #emailSignin pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" formControlName="email" class="form-control mb-4" placeholder="E-mail">
 
       <input type="password" #passwordSignin formControlName="password" class="form-control mb-4" placeholder="Password">
+      <span (click)="passwordSignin.type=passwordSignin.type=='password'?'text':'password'" class="fa fa-fw field-icon toggle-password" [ngClass]="passwordSignin.type=='password'? 'fa-eye': 'fa-eye-slash'"></span>
+
 
       <div class="modal-footer loginmodal">
         <button type="button" class="btn btn-outline-dark" (click)="open(signup)">Sign Up?</button>
@@ -63,6 +65,7 @@
       <input type="email" #emailSignup  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" formControlName="emailsU" class="form-control mb-4" placeholder="E-mail *">
 
       <input type="password" #passwordSignup formControlName="passwordsU" class="form-control mb-4" placeholder="Password *">
+      <span (click)="passwordSignup.type=passwordSignup.type=='password'?'text':'password'" class="fa fa-fw field-icon toggle-password" [ngClass]="passwordSignup.type=='password'? 'fa-eye': 'fa-eye-slash'"></span>
 
       <div class="modal-footer loginmodal">
         <button [disabled]="signupForm.invalid" (click)="modal.close()" (click)="onSignup(emailSignup.value, passwordSignup.value)" type="button" class="btn btn-outline-dark" >Sign Up</button>

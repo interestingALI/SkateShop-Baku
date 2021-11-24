@@ -204,6 +204,14 @@ input.ng-valid {
 .brdr-btm > li > a:hover {
   border-bottom: 1px solid #555;
 }
+.field-icon {
+  cursor: pointer;
+  float: right;
+  left: -15px;
+  margin-top: -50px;
+  position: relative;
+  z-index: 2;
+}
 ////////////////////////////////////////////////
 @media (min-width: 992px) {
   .header li {

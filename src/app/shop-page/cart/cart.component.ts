@@ -4,7 +4,8 @@ import { CartService } from 'src/app/services/cart.service';
 import { CartItem } from 'src/app/models/cart-item';
 import { MessengerService } from 'src/app/services/messenger.service';
 import { HttpClient } from '@angular/common/http';
-import { cartUrl } from '../../config/api';
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/database'
 
 @Component({
   selector: 'app-cart',
@@ -31,37 +32,17 @@ export class CartComponent implements OnInit {
 
   loadCartItems(){
     this.cartService.getCartItems().subscribe((items:CartItem[]) => {
-      this.cartItems = this.savedItems ? this.savedItems : items;
+      this.cartItems = items;
       this.calcTotal()
     })
-    this.savedItems = false
   }
 
-  savedItems:any = false;
-  execOnRemove(itemRemoved) {
-
+  clearCart(){
     this.cartService.getCartItems().subscribe((items:CartItem[]) => {
-      
-      for (let products of this.cartItems) {
-        if (products.id == itemRemoved.id) {
-          products.qty -= 1
-        }
-
-        if (products.qty == 0) {
-          this.cartItems.splice(this.cartItems.indexOf(products), 1);
-        }
-
-      }
-      
-      this.savedItems = this.cartItems
-      this.calcTotal()
-
+      this.cartItems = [];
     })
+    this.cartService.clearCart()
   }
-
-
-
-  
 
   calcTotal(){
     this.cartTotal = 0

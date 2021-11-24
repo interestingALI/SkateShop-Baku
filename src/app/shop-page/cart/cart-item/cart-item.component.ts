@@ -8,15 +8,11 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class CartItemComponent implements OnInit {
 
   @Input() cartItem:any
-  @Output() onRemove = new EventEmitter();
+  
 
+  constructor() { }
 
   ngOnInit(): void {
   }
-
-  removeProductFromCart(theItem){
-    this.onRemove.emit(theItem);
-  }
-
 
 }
