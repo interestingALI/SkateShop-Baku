@@ -1,6 +1,6 @@
 <div class="card mb-4 box-shadow">
 
-    <div class="img-wrapper"><img [src]="productItem.imageUrl" alt="product" class="card-img-top"></div>
+    <div (click)="open(details)" class="img-wrapper"><img [src]="productItem.imageUrl" alt="product" class="card-img-top"></div>
 
     <div class="card-body">
         <h5>{{ productItem.name }}</h5>

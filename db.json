@@ -86,7 +86,7 @@
             "name": "INDEPENDENT 144 MID TRUCK 8.25",
             "description": "Cast baseplate, lower profile hanger, height: 52 mm (mid), weight: 398 g",
             "price": 37.99,             
-            "imageUrl": "https://cdn.skatedeluxe.com/images/product_images/200px2x/139664-0-Independent-144Mid.jpg",
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/SjgJBO4jP_9ocB99dwRfgFP3ky4=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/139664-0-Independent-144Mid.jpg",
             "category": "Trucks",
             "color": "Polished"
         },
@@ -152,7 +152,69 @@
             "imageUrl": "https://cdn.skatedeluxe.com/thumb/bxrqgUlROxv9bpc-zBfi5V-Qazw=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/2731-0-BonesBearings-SuperSwiss6.jpg",
             "category": "Bearings",
             "color": "Blue"
+        },
+        {
+            "id": 17,
+            "name": "TENSOR ALLOYS 5.5 REGULAR TRUCK",
+            "description": "Aluminum alloy. We advise you to use this truck on decks with a width from 8 to 8.25.",
+            "price": 49.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/-KEbjqo8jl5FOGFXKUhrNBe-al8=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/131852-0-Tensor-Alloys55Regular.jpg",
+            "category": "Trucks",
+            "color": "Polished"
+        },
+        {
+            "id": 18,
+            "name": "BONES ATFORMULA ROUGH RIDERS RUNNERS WHEELS",
+            "description": "Wide Rough Riders shape, Reenforced wheel core, ATF All Terrain Urethane Formula, perfect for cruising, filming and skating on rough terrain",
+            "price": 54.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/cJcnawpuqXkzLgWzbk-jL218I98=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/143955-0-Bones-ATFormulaRoughRidersRunners.jpg",
+            "category": "Wheels",
+            "color": "Red"
+        },
+        {
+            "id": 20,
+            "name": "FLIP MULTI ODYSSEY 7.75 COMPLETE-BOARD ",
+            "description": "Medium concave, standard popsicle shape, 7-ply maple construction Flip Multi Odyssey 7.75 deck",
+            "price": 109.99 ,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/YHeqNcDIHiM3nJdlE8-H1GsqmSU=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/144146-0-Flip-MultiOdyssey775.jpg",
+            "category": "Skateboards",
+            "color": "Blue"
+        },
+        {
+            "id": 21,
+            "name": "SPITFIRE X SKATE LIKE A GIRL FORMULA WHEELS",
+            "description": "Spitfire Formula Four urethane formula, high abrasion resistance and flatspot resistance, anti-stick slide for constant, fast and smooth slides",
+            "price": 59.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/Pr2LQPRMJXkohkTcjZH7u4gPxFE=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/144429-0-Spitfire-xSkateLikeAGirlFormulaFourRadial.jpg",
+            "category": "Wheels",
+            "color": "Blue"
+        },
+        {
+            "id": 22,
+            "name": "SHAKE JUNT OG'S ABEC 7 BEARINGS INKL. SPACER",
+            "description": "ABEC 7 rated, single, non-contact, removable rubber shield for easy cleaning and less friction, very durable, pre-lubricated",
+            "price": 24.99,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/AdpSPkYFD0CC0v7lTUuYFDzwAb8=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/23143-0-ShakeJunt-OGsABEC7.jpg",
+            "category": "Wheels",
+            "color": "Yellow"
+        },
+        {
+            "id": 23,
+            "name": "TOY MACHINE CRUYSBERGHS PEN 'N' INK 8 DECK",
+            "description": "7-ply maple construction, Axel Cruysberghs pro model, Pen 'N' Ink series",
+            "price": 69.99 ,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/Na5xVKkMOR6XBflA1ZIppJ1qjYk=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/140502-0-ToyMachine-CruysberghsPenNInk8.jpg",
+            "category": "Decks",
+            "color": "Yellow"
+        },
+        {
+            "id": 24,
+            "name": "BONES BEARINGS CERAMIC SUPER REDS BEARINGS",
+            "description": "Ceramic balls re-polish the steel races flat again providing a self-healing benefit because they're harder than steel, higher quality steel races and a superior surface finish, high-speed nylon ball cage",
+            "price": 114.99 ,             
+            "imageUrl": "https://cdn.skatedeluxe.com/thumb/2Ce9qurMitIHEp743yQj3JQ7_Io=/fit-in/1500x1749/filters:fill(white):brightness(-4)/product/14469_0.jpg",
+            "category": "Bearings",
+            "color": "White"
         }
-    ],
-    "cart": [""]
+    ]
 }
