@@ -153,7 +153,9 @@
   font-size: large;
 }
 .dropdown-menu {
+  right: 0 !important;
   background-color: $orangebase;
+  border: 1px solid black;
 }
 .fa-shopping-basket {
   margin-left: 5px;
@@ -197,9 +199,6 @@ input.ng-valid {
 .dropdown-item {
   word-wrap: break-word;
   white-space: pre-line;
-}
-.dropdown-menu {
-  right: 0 !important;
 }
 .brdr-btm > li > a:hover {
   border-bottom: 1px solid #555;
