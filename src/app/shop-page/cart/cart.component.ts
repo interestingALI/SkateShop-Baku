@@ -31,6 +31,7 @@ export class CartComponent implements OnInit {
   }
 
   loadCartItems(){
+    console.log()
     this.cartService.getCartItems().subscribe((items:CartItem[]) => {
       this.cartItems = items;
       this.calcTotal()
@@ -43,6 +44,27 @@ export class CartComponent implements OnInit {
     })
     this.cartService.clearCart()
   }
+
+  removeFromCart(itemRemoved){
+    this.cartService.getCartItems().subscribe((items:CartItem[]) => {
+      for (let i of items) {
+        if (i.id == itemRemoved.id) {
+          i.qty--
+          if (i.qty == 0) {
+            items.splice(items.indexOf(i), 1)
+          }
+          this.cartItems = items;
+          this.calcTotal();
+          break;
+        }
+      }
+    })
+
+    this.cartService.removeFromCart(itemRemoved)
+  }
+
+
+
 
   calcTotal(){
     this.cartTotal = 0

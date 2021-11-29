@@ -49,26 +49,32 @@ export class CartService {
     return this.http.post(cartUrl, { product });
   }
 
+  removeFromCart(itemRemoved){
+
+    let account = JSON.parse(localStorage.getItem('user')) === null ? '' : JSON.parse(localStorage.getItem('user')).email
+    account == '' ?  account = ['_default', ''] : account = /([^@]+)/.exec(account)
+
+    const cartRef = firebase.database().ref('/' + account[0] + '_user' + '/cart');
+    
+
+    const itemQuery = cartRef.orderByChild("product/id").equalTo(itemRemoved.id);
+
+    let itemRef:any = ''
+    itemQuery.get().then((snapshot) => {
+      snapshot.forEach((productSnapshot) => {
+        itemRef = firebase.database().ref('/' + account[0] + '_user' + '/cart' + '/' + productSnapshot.key);
+      })
+      itemRef.remove()
+    })
+
+  }
+
   clearCart(){
 
     let account = JSON.parse(localStorage.getItem('user')) === null ? '' : JSON.parse(localStorage.getItem('user')).email
     account == '' ?  account = ['_default', ''] : account = /([^@]+)/.exec(account)
 
     let adaRef = firebase.database().ref('/' + account[0] + '_user' + '/cart');
-
-    // let sumt = firebase.database().ref('/' + account[0] + '_user' + '/cart').orderByKey();
-
-    // sumt.once("value").then(function(snapshot) {
-    //   let key;
-    //     snapshot.forEach(function(childSnapshot) {
-          
-    //       key = childSnapshot.key;
-          
-    //     });
-    //     console.log(key)
-    //     console.log(snapshot.val())
-    // });
-
 
     return adaRef.remove()
 
