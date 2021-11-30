@@ -7,4 +7,18 @@
     <li class="list-group-item active">
         <strong>Total: {{cartTotal | currency:'USD'}} <a (click)='clearCart()' class="delete"> <i class="far fa-trash-alt"></i></a></strong>
     </li>
+    <li class="list-group-item active-light">
+        <button (click)="open(checkout)" class="checkout-button">CHECKOUT</button>
+    </li>
 </ul>
+
+
+
+
+<ng-template #checkout let-modal>
+
+    <div class="checkout">
+        
+    </div>
+
+</ng-template>

@@ -4,8 +4,7 @@ import { CartService } from 'src/app/services/cart.service';
 import { CartItem } from 'src/app/models/cart-item';
 import { MessengerService } from 'src/app/services/messenger.service';
 import { HttpClient } from '@angular/common/http';
-import firebase from 'firebase/compat/app'
-import 'firebase/compat/database'
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-cart',
@@ -18,7 +17,7 @@ export class CartComponent implements OnInit {
 
   cartTotal = 0
 
-  constructor(private msg: MessengerService, private cartService: CartService, private http: HttpClient) { }
+  constructor(private msg: MessengerService, private cartService: CartService, private http: HttpClient, private modalService: NgbModal) { }
   ngOnInit(): void {
     this.handleSubscription()
     this.loadCartItems()
@@ -63,9 +62,6 @@ export class CartComponent implements OnInit {
     this.cartService.removeFromCart(itemRemoved)
   }
 
-
-
-
   calcTotal(){
     this.cartTotal = 0
     this.cartItems.forEach(item => {
@@ -73,4 +69,8 @@ export class CartComponent implements OnInit {
     })
   }
 
+
+  open(content) {
+    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'});
+  }
 }

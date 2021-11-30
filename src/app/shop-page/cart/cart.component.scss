@@ -6,6 +6,9 @@
 .active {
   background-color: #4850b1 !important;
 }
+.active-light {
+  background-color: #4851b1b4 !important;
+}
 .alert-info {
   border: 1px solid $orangebase;
 }
@@ -17,4 +20,28 @@
   &:hover {
     color: red;
   }
+}
+.checkout-button {
+  width: 100%;
+  padding: 5px;
+  border-radius: 10%;
+  border: 0;
+  background-color: #4850b1;
+  color: white;
+  font-weight: bold;
+  transition: 0.5s;
+  &:hover {
+    background-color: #1925ad;
+  }
+  &:active {
+    border: 1px solid black;
+  }
+}
+
+////////////////////
+
+.checkout {
+  width: 100%;
+  height: 70vh;
+  background-color: $orangelight;
 }
