@@ -12,11 +12,14 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterPipe } from '../pipes/filter.pipe';
 import { SortPipe } from '../pipes/sort.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PriceFilterPipe } from '../pipes/price-filter.pipe';
 
 import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { BrowserModule } from '@angular/platform-browser';
+import { CreditCardDirectivesModule } from 'angular-cc-library';
+
 
 
 
@@ -37,8 +40,11 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
         SimpleNotificationsModule.forRoot(),
         BrowserAnimationsModule,
         NgbModule,
-        FormsModule,
-        NgxImageZoomModule
+        BrowserModule,
+        FormsModule, 
+        CreditCardDirectivesModule,
+        NgxImageZoomModule,
+        ReactiveFormsModule
     ],
     exports: [
         ShopPageComponent,

@@ -5,6 +5,8 @@ import { CartItem } from 'src/app/models/cart-item';
 import { MessengerService } from 'src/app/services/messenger.service';
 import { HttpClient } from '@angular/common/http';
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { CreditCardValidators } from 'angular-cc-library';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cart',
@@ -17,10 +19,16 @@ export class CartComponent implements OnInit {
 
   cartTotal = 0
 
-  constructor(private msg: MessengerService, private cartService: CartService, private http: HttpClient, private modalService: NgbModal) { }
+  constructor(private msg: MessengerService, private cartService: CartService, private http: HttpClient, private modalService: NgbModal, private _fb: FormBuilder) { }
   ngOnInit(): void {
     this.handleSubscription()
     this.loadCartItems()
+    ////
+    this.form = this._fb.group({
+      creditCard: ['', [CreditCardValidators.validateCCNumber]],
+      expirationDate: ['', [CreditCardValidators.validateExpDate]],
+      cvc: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(4)]] 
+    });
   }
 
   handleSubscription(){
@@ -73,4 +81,10 @@ export class CartComponent implements OnInit {
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'});
   }
+
+  //////////////////////////////////
+
+  form: FormGroup;
+  submitted: boolean = false;
+
 }
