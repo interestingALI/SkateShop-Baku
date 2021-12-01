@@ -38,10 +38,82 @@
   }
 }
 
-////////////////////
+/////////////////////////////////////////////
 
 .checkout {
   width: 100%;
-  height: 70vh;
   background-color: $orangelight;
+}
+
+.card {
+  background-color: $orangelight;
+  max-width: 500px;
+  margin: auto;
+  color: #222;
+  border-radius: 0;
+}
+
+.h8 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.btn.btn-primary {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  background-image: linear-gradient(
+    to right,
+    rgb(253, 183, 52) 0%,
+    rgb(252, 171, 22) 51%,
+    rgb(206, 134, 0) 100%
+  );
+  border: none;
+  transition: 0.5s;
+  background-size: 200% auto;
+}
+
+.btn.btn.btn-primary {
+  color: #222;
+  font-weight: 600;
+}
+.btn.btn.btn-primary:hover {
+  background-position: right center;
+  color: rgb(119, 77, 0);
+  text-decoration: none;
+}
+
+.btn.btn-primary:hover .fas.fa-arrow-right {
+  transform: translate(13px);
+  transition: transform 0.2s ease-in;
+}
+
+.form-control {
+  color: black;
+  background-color: rgba(255, 166, 0, 0.315);
+  border: 2px solid transparent;
+  height: 60px;
+  padding-left: 20px;
+  vertical-align: middle;
+}
+
+.form-control:focus {
+  color: black;
+  background-color: $orangedark;
+  border: 2px solid $orangeverydark;
+  box-shadow: none;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+::placeholder {
+  font-size: 14px;
+  font-weight: 600;
 }

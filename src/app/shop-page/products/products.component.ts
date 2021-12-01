@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
 
 export class ProductsComponent implements OnInit {
 
+
   productsList:Product[]=[]
   @Input() color = '';
   @Input() SortbyParam = '';
@@ -29,5 +30,6 @@ export class ProductsComponent implements OnInit {
     })
   }
 
+  
 }
 

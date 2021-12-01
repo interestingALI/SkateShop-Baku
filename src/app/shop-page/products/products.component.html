@@ -1,5 +1,6 @@
 <app-loading-spinner *ngIf="this.showSpinner"></app-loading-spinner>
-<div class="row">  
+<div class="row a100vh">  
+    <div *ngIf="((productsList|filter:color:'color'|filter:category:'category'|priceFilter:[from, to]:'price') == 0) && !this.showSpinner"><h3>No products found for your filter options ¯\_(⊙︿⊙)_/¯ </h3></div>
     <div class="col-md-4" *ngFor="let product of productsList|filter:color:'color'|filter:category:'category'|priceFilter:[from, to]:'price'|sort:[SortbyParam, SortDirection]">
         <app-product-item [productItem]='product'></app-product-item>
     </div>
