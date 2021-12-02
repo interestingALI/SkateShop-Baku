@@ -5,3 +5,10 @@
         <app-product-item [productItem]='product'></app-product-item>
     </div>
 </div>    
+
+<!-- Scroll button  -->
+<div class="scroll-to-top" [ngClass]="{'show-scrollTop': windowScrolled}">
+    <button (click)="scrollToTop()">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+</div>
