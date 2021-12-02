@@ -1,9 +1,9 @@
 <div class="card mb-4 box-shadow">
 
-    <div (click)="open(details)" class="img-wrapper"><img [src]="productItem.imageUrl" alt="product" class="card-img-top"></div>
+    <div (click)="open(details)" class="img-wrapper"><img [src]="productItem.imageUrl" alt="product" class="card-img-top" /></div>
 
     <div class="card-body">
-        <h5>{{ productItem.name }}</h5>
+        <h5>{{ productItem.name }} <i (click)="Info('Item Removed from Wishlist.')" (click)="handleRemoveFromWishlist()" *ngIf="addedToWishlist" class="fas fa-heart wishlist-b"></i> <i (click)="onSuccess('Item added to Wishlist Succesfully')" (click)="handleAddToWishlist()" *ngIf="!addedToWishlist" class="far fa-heart wishlist-b"></i></h5>
         <p class="card-text">{{ productItem.description | slice:0:80}}..</p>
         <p class="card-text" style="color: #555; margin-bottom: 0!important;"><small>{{productItem.category}} , {{productItem.color}}</small></p>
         <p class="card-text"><strong>{{  productItem.price == 0 ?  'Out of Stock' : (productItem.price | currency:'USD') }}</strong></p>
@@ -41,7 +41,7 @@
                 [lensHeight]="170"
             ></lib-ngx-image-zoom>
         </div>
-        <h4 class="text-center">{{ productItem.name }}</h4>
+        <h4 class="text-center">{{ productItem.name }}  <i (click)="Info('Item Removed from Wishlist.')" (click)="handleRemoveFromWishlist()" *ngIf="addedToWishlist" class="fas fa-heart wishlist-b"></i> <i (click)="onSuccess('Item added to Wishlist Succesfully')" (click)="handleAddToWishlist()" *ngIf="!addedToWishlist" class="far fa-heart wishlist-b"></i></h4>
         <p class="text-center" style="color: #555; margin-bottom: 0!important;"><small>{{productItem.category}} , {{productItem.color}}</small></p>
         <h5 class="text-center">Product Description :</h5>
         <p class="desc text-center">{{ productItem.description }}</p>

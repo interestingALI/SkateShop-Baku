@@ -88,6 +88,11 @@
 .wishlist-b {
   color: red;
   float: right;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
+  margin-top: 5px;
+}
+h4 > .wishlist-b {
+  margin-right: 10px;
+  font-size: 26px;
 }

@@ -3,6 +3,7 @@ import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 import {Inject, HostListener } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { WishlistService } from 'src/app/services/wishlist.service';
 
 @Component({
   selector: 'app-products',
@@ -14,6 +15,7 @@ export class ProductsComponent implements OnInit {
 
 
   productsList:Product[]=[]
+  wishlist: number[]= []
   @Input() color = '';
   @Input() SortbyParam = '';
   @Input() SortDirection = 'asc';
@@ -22,7 +24,7 @@ export class ProductsComponent implements OnInit {
   @Input() to = '';
   
   
-  constructor(private productService: ProductService, @Inject(DOCUMENT) private document: Document){}
+  constructor(private wishlistService: WishlistService, private productService: ProductService, @Inject(DOCUMENT) private document: Document){}
   showSpinner:boolean = true;
 
 //////////////////////////////  scroll to top  ///////////////////
@@ -45,14 +47,20 @@ export class ProductsComponent implements OnInit {
 //////////////////////////////////////////////////////////////////
 
 
-
-
-
   ngOnInit(): void {
+    this.loadProducts()
+    this.loadWishlist()
+  }
+
+  loadProducts(){
     this.productService.getProducts().subscribe((products) => {
       this.productsList = products;  
       this.showSpinner = false;
     })
+  }
+
+  loadWishlist(){
+    this.wishlistService.getWishlist().subscribe(productIds => this.wishlist = productIds)
   }
 
   
