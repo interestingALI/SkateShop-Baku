@@ -1,5 +1,4 @@
-let account = JSON.parse(localStorage.getItem('user')) === null ? '' : JSON.parse(localStorage.getItem('user')).email
-account == '' ?  account = ['_default', ''] : account = /([^@]+)/.exec(account)
+export let account = (JSON.parse(localStorage.getItem('user')) === null ? '' : JSON.parse(localStorage.getItem('user')).email) == '' ? ['_default', ''] :  /([^@]+)/.exec(JSON.parse(localStorage.getItem('user')) === null ? '' : JSON.parse(localStorage.getItem('user')).email)
 
 export const baseUrl = 'https://skateshopbaku-default-rtdb.europe-west1.firebasedatabase.app'
 export const productsUrl = baseUrl + '/products/.json'

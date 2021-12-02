@@ -7,6 +7,7 @@ import { cartUrl } from '../config/api';
 import { Product } from '../models/product';
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/database'
+import { account } from '../config/api';
 
 @Injectable({
   providedIn: 'root'
@@ -51,9 +52,6 @@ export class CartService {
 
   removeFromCart(itemRemoved){
 
-    let account = JSON.parse(localStorage.getItem('user')) === null ? '' : JSON.parse(localStorage.getItem('user')).email
-    account == '' ?  account = ['_default', ''] : account = /([^@]+)/.exec(account)
-
     const cartRef = firebase.database().ref('/' + account[0] + '_user' + '/cart');
     
 
@@ -70,9 +68,6 @@ export class CartService {
   }
 
   clearCart(){
-
-    let account = JSON.parse(localStorage.getItem('user')) === null ? '' : JSON.parse(localStorage.getItem('user')).email
-    account == '' ?  account = ['_default', ''] : account = /([^@]+)/.exec(account)
 
     let adaRef = firebase.database().ref('/' + account[0] + '_user' + '/cart');
 
