@@ -10,7 +10,7 @@
 			</div>
 			<div class="row" >  
 				<div class="col-md-4" *ngFor='let product of popularList'>
-					<app-product-item [productItem]='product'></app-product-item>
+					<app-product-item [addedToWishlist]="wishlist.indexOf(product.id) >= 0" [productItem]='product'></app-product-item>
 				</div>
 			</div>    
 		</div>
