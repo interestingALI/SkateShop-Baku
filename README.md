@@ -9,3 +9,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:8000/`. The app w
 ## Firebase
 
 https://skateshopbaku.web.app/
+
+## Presentation
+
+https://docs.google.com/presentation/d/1DzePZ_zimdWi59t5_Cs_0zVIzH60VSn3snezgwIfqbY
